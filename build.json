@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "keyrelease",
+            "storePassword": "buluayam",
+            "alias": "key",
+            "password": "buluayam",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "keyrelease",
+            "storePassword": "buluayam",
+            "alias": "key",
+            "password": "buluayam",
+            "keystoreType": ""
+        }
+    }
+}

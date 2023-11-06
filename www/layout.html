@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-textdirection="ltr" class="loading">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>SURYA EXPRESS MANTAP</title>
+ 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" />
+
+    <!-- Sweetswal Css -->
+    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+	
+	<script type="text/javascript">
+      var localhost = "https://old-fast.klikrumahaja.com";
+	  var storage = window.localStorage;
+	  var profile_name = storage.getItem("name");
+	  var profile_email = storage.getItem("email");
+	  var profile_role = storage.getItem("role");
+      var profile_branch_id = storage.getItem("branch_id");
+	</script>
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="javascript:void(0);"> &nbsp; SURYA EXPRESS MANTAP</a>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="images/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="profile_name"></div>
+                    <div class="email" id="profile_email"></div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="change.html"><i class="material-icons">vpn_key</i>Change Password</a></li>
+                            <li><a href="javascript:logout();"><i class="material-icons">input</i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li id="setting_kurs" style="display:none">
+						<a href="#">
+							<i class="material-icons">language</i>
+							<span>KURS: <label id="current_kurs">0</label></span>
+						</a>
+					</li>
+                    <li class="active">
+                        <a href="layout.html">
+                            <i class="material-icons">home</i>
+                            <span>HOME</span>
+                        </a>
+                    </li>
+                    
+
+                    <li>
+                        <a href="transaction.html">
+                            <i class="material-icons">assignment_turned_in</i>
+                            <span>TRANSACTION</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="member.html">
+                            <i class="material-icons">people</i>
+                            <span>MEMBER</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="identity.html">
+                            <i class="material-icons">camera_alt</i>
+                            <span>CAPTURE</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="register.html">
+                            <i class="material-icons">group_add</i>
+                            <span>NEW MEMBER</span>
+                        </a>
+                    </li>
+					
+                    <li>
+                        <a href="invoice.html">
+                            <i class="material-icons">assessment</i>
+                            <span>CHECK INVOICE</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="detail_transaction.html">
+                            <i class="material-icons">analytics</i>
+                            <span>DETAIL TRANSACTION</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="beneficiary.html">
+                            <i class="material-icons">show_chart</i>
+                            <span>BENEFICIARY</span>
+                        </a>
+                    </li>
+					
+                    <li>
+                        <a href="print.html">
+                            <i class="material-icons">print</i>
+                            <span>RE-PRINT</span>
+                        </a>
+                    </li>
+					
+					<li>
+                        <a href="setting.html">
+                            <i class="material-icons">settings</i>
+                            <span>SETTING</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2021 <a href="javascript:void(0);">SURYA EXPRESS MANTAP</a>.
+                </div>
+                <div class="version">
+                   <b>Version: </b> 2.0.17
+
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+			<div class="row clearfix">
+			<div class="col-xs-12 col-sm-12">
+				<div class="card profile-card">
+					<div class="profile-header" style="background-image: url('images/b1.jpg');background-size: cover;">&nbsp;</div>
+					<div class="profile-body">
+						<div class="image-area">
+							<img src="images/user.png" alt="Profile Image" style="width:100px">
+						</div>
+						<div class="content-area">
+							<h3 id="vc_name"></h3>
+							<p id="vc_email"></p>
+							<p id="vc_role"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+			<div class="row clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="info-box bg-red hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">assignment_turned_in</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">TOTAL TRANSACTION</div>
+                            <div class="number count-to" id="total-transaction" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20">0</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="info-box bg-deep-purple hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">card_travel</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">YOUR TRANSACTION</div>
+                            <div class="number count-to" id="your-transaction" data-from="0" data-to="257" data-speed="1000" data-fresh-interval="20">0</div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+			
+			<div class="row clearfix">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="body bg-red">
+                            <div class="sparkline" data-type="line" data-spot-Radius="4" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#fff"
+                                 data-min-Spot-Color="rgb(255,255,255)" data-max-Spot-Color="rgb(255,255,255)" data-spot-Color="rgb(255,255,255)"
+                                 data-offset="90" data-width="100%" data-height="92px" data-line-Width="2" data-line-Color="rgba(255,255,255,0.7)"
+                                 data-fill-Color="rgba(0, 188, 212, 0)">
+                                12,10,9,6,5,6,10,5,7,5,12,13,7,12,11
+                            </div>
+                            <ul class="dashboard-stat-list">
+                                <li>
+                                    LATES TRANSACTION
+                                    <span class="pull-right"><b id="device-input">0</b> <small>INVOICE</small></span>
+                                </li>
+								<li>
+                                    DEVICE INPUT : TAB
+                                    <span class="pull-right"><b id="tab">0</b> <small>INVOICE</small></span>
+                                </li>
+								<li>
+                                    DEVICE INPUT : MANUAL
+                                    <span class="pull-right"><b id="manual">0</b> <small>INVOICE</small></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="card">
+						<div class="header">
+							<b> FIVE LATES TRANSACTIONS </b>
+						</div>
+                        <div class="body">
+                            <div id="bar_chart" class="flot-chart"></div>
+							<ul class="dashboard-stat-list" id="dashboard-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+	
+	<!-- Flot Chart Plugins Js -->
+    <script src="plugins/flot-charts/jquery.flot.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="plugins/flot-charts/jquery.flot.time.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Sweetswal Plugin Js -->
+	<script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#profile_name").html(profile_name);
+			$("#profile_email").html(profile_email);
+			$("#vc_name").html(profile_name);
+			$("#vc_email").html(profile_email);
+			$("#vc_role").html(profile_role);
+            initSparkline();
+		});
+		
+		function initSparkline() {
+			$(".sparkline").each(function () {
+				var $this = $(this);
+				$this.sparkline('html', $this.data());
+			});
+		}
+		
+		$.ajax({
+				method: "GET",
+				url: localhost+"/api/mobile/statistic",
+				data: {
+					created_by : profile_name,
+                    branch_id : profile_branch_id
+				},	
+				dataType: "json",
+				success: function (response) {
+					if(response.status){
+						$("#total-transaction").html(toCurrency(response.total_transaction));
+						$("#your-transaction").html(toCurrency(response.total_user));
+						$("#device-input").html(toCurrency(response.total_transaction));
+						$("#tab").html(toCurrency(response.total_device_tab));
+						$("#manual").html(toCurrency(response.total_device_manual));
+						var bar = response.latest_transfer;
+						var barChartData = [];
+						if(bar != null){
+							for(var i=0; i < bar.length; i++){
+								barChartData.push([bar[i].invoice_no, bar[i].transfer_value]);
+								$("#dashboard-list").append('<li> INVOICE NO: '+bar[i].invoice_no+'<span class="pull-right"><b>'+toCurrency(bar[i].transfer_value)+'</b> <small>HKD</small></span></li>');
+							}
+							
+							$.plot('#bar_chart', [barChartData], {
+								series: {
+									stack: 0,
+									lines: {
+										show: false,
+										fill: true,
+										steps: false
+									},
+									bars: {
+										show: true,
+										barWidth: 0.6
+									},
+									color: '#F44336'
+								},
+								grid: {
+									hoverable: true,
+									autoHighlight: false,
+									borderColor: '#242424',
+									borderWidth: 1,
+									tickColor: '#FFFFFF'
+								}
+							});
+						}
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("Can't access server, try again later");
+				}
+			});
+		
+		var app = {
+			// Application Constructor
+			initialize: function() {
+				document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+			},
+
+			// deviceready Event Handler
+			//
+			// Bind any cordova events here. Common events are:
+			// 'pause', 'resume', etc.
+			onDeviceReady: function() {
+				document.addEventListener("backbutton", onBackKeyDown, false);
+			},
+
+			// Update DOM on a Received Event
+			receivedEvent: function(id) {
+			
+			}
+		};
+		
+		function onBackKeyDown() {
+			navigator.app.exitApp();
+		}
+		
+		app.initialize();
+		
+		function logout(){
+			storage.clear();
+			window.location.href ="login.html";
+		}
+
+        function toCurrency(number) {
+            var n = parseInt(number);
+            return n.toLocaleString();
+        }
+    </script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

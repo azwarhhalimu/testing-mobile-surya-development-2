@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-textdirection="ltr" class="loading">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>SURYA EXPRESS MANTAP</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Sweetswal Css -->
+    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+</head>
+
+<body class="login-page" style="background-color: #ffff">
+    <div class="login-box" style="padding-top:100px">
+        <div style="padding:20px">
+            <div class="body">
+                <form id="sign_in" onsubmit="return false">
+                    <div class="msg">
+						<img src="img/logo.png" style="width:100%"><br>
+                    </div>
+                    <label>Email/Username</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail / Username" required autofocus>
+                        </div>
+                    </div>
+                    <label>Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+               
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn bg-red waves-effect" type="submit" id="btnSubmit">SIGN IN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/pages/examples/sign-in.js"></script>
+    <!-- Sweetswal Plugin Js -->
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>
+    
+	<script type="text/javascript">
+	$("#btnSubmit").click(function(){
+		$.ajax({
+			method: "GET",
+			url: "http://167.99.75.238/api/mobile/login",
+			data: {
+				email: $("#email").val(),
+				password:$("#password").val()
+			},	
+			dataType: "json",
+			success: function (response) {
+				if(response.status){
+					var storage = window.localStorage;
+					storage.setItem("email", response.data.email);
+					storage.setItem("id", response.data.id);
+					storage.setItem("role_id", response.data.role_id);
+					storage.setItem("name", response.data.name);
+					storage.setItem("password", $("#password").val());
+					storage.setItem("role", response.role);
+					storage.setItem("user", response.data);
+                    storage.setItem("branch_id", response.data.branch_id);
+                    storage.setItem("branch_name", response.data.branch.branch_name);
+					window.location.href ="layout.html";
+				}else{
+					swal("Invalid cridential, please try again..");
+				}
+			},
+			error: function (xhr, status, errorThrown) {
+				swal("Can't access server, try again later");
+			}
+		});
+    });
+	
+	var app = {
+		// Application Constructor
+		initialize: function() {
+			document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+		},
+
+		// deviceready Event Handler
+		//
+		// Bind any cordova events here. Common events are:
+		// 'pause', 'resume', etc.
+		onDeviceReady: function() {
+			document.addEventListener("backbutton", onBackKeyDown, false);
+		},
+
+		// Update DOM on a Received Event
+		receivedEvent: function(id) {
+		
+		}
+	};
+	
+	function onBackKeyDown() {
+		navigator.app.exitApp();
+	}
+	
+	app.initialize();
+	</script>
+</body>
+</html>

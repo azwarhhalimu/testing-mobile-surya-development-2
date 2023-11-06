@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-textdirection="ltr" class="loading">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>SURYA EXPRESS MANTAP</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="css/themes/all-themes.css" rel="stylesheet" />
+
+    <link href="plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Sweetswal Css -->
+    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
+
+    <script type="text/javascript">
+        var localhost = "https://old-fast.klikrumahaja.com";
+        var storage = window.localStorage;
+        var profile_name = storage.getItem("name");
+        var profile_email = storage.getItem("email");
+
+        if (profile_name == null || profile_name == "") {
+            storage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="javascript:void(0);"> &nbsp; SURYA EXPRESS MANTAP</a>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="images/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        id="profile_name"></div>
+                    <div class="email" id="profile_email"></div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="change.html"><i class="material-icons">vpn_key</i>Change Password</a></li>
+                            <li><a href="javascript:logout();"><i class="material-icons">input</i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li id="setting_kurs" style="display:none">
+						<a href="#">
+							<i class="material-icons">language</i>
+							<span>KURS: <label id="current_kurs">0</label></span>
+						</a>
+					</li>
+                    <li>
+                        <a href="layout.html">
+                            <i class="material-icons">home</i>
+                            <span>HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transaction.html">
+                            <i class="material-icons">assignment_turned_in</i>
+                            <span>TRANSACTION</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="member.html">
+                            <i class="material-icons">people</i>
+                            <span>MEMBER</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="identity.html">
+                            <i class="material-icons">camera_alt</i>
+                            <span>CAPTURE</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="register.html">
+                            <i class="material-icons">group_add</i>
+                            <span>NEW MEMBER</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="invoice.html">
+                            <i class="material-icons">assessment</i>
+                            <span>CHECK INVOICE</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="detail_transaction.html">
+                            <i class="material-icons">analytics</i>
+                            <span>DETAIL TRANSACTION</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="beneficiary.html">
+                            <i class="material-icons">show_chart</i>
+                            <span>BENEFICIARY</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="print.html">
+                            <i class="material-icons">print</i>
+                            <span>RE-PRINT</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="setting.html">
+                            <i class="material-icons">settings</i>
+                            <span>SETTING</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2021 <a href="javascript:void(0);">SURYA EXPRESS MANTAP</a>.
+                </div>
+                <div class="version">
+                   <b>Version: </b> 2.0.17
+
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Input -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div >
+                        <div class="header">
+                            <h2>
+                                SETTING<br>
+                                <small>Setup your device</small>
+                            </h2>
+                            <br>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <b>CHOOSE DEVICE</b>
+                                        <p id="device_list"></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-12">
+                                    <b>PRINTER MAC ADDRESS</b>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">printer</i>
+                                        </span>
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="printer" name="printer"
+                                                class="form-control" placeholder="Example: 66:12:E1:BB:23:1D">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-md-6 text-right">
+                                    <button type="button" class="btn bg-red waves-effect" id="btnSubmit"
+                                        name="btnSubmit" onclick="printer()">
+                                        <i class="material-icons">cloud_upload</i> SUBMIT
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Input -->
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="plugins/node-waves/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="plugins/jquery-countto/jquery.countTo.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Input Mask Plugin Js -->
+    <script src="plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+
+    <!-- Sweetswal Plugin Js -->
+	<script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Custom Js -->
+    <script src="js/admin.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        var app = {
+            initialize: function () {
+                this.bindEvents();
+            },
+            bindEvents: function () {
+                document.addEventListener('deviceready', this.onDeviceReady, false);
+            },
+            onDeviceReady: function () {
+                bluetoothSerial.list(function (devices) {
+                    devices.forEach(function (device) {
+                        $("#device_list").text(device.id);
+                        $("#printer").val(device.id);
+                    });
+
+                }, function (){});
+            }
+        };
+
+        $(document).ready(function () {
+            app.initialize();
+            $("#profile_name").html(profile_name);
+            $("#profile_email").html(profile_email);
+            $("#printer").inputmask("mac");
+        });
+
+    </script>
+    <script type="text/javascript">
+        function printer() {
+            var printer = $("#printer").val();
+
+            if (printer == null || printer == "") {
+                swal("Printer Mac Address should not empty..");
+                return;
+            }
+
+            storage.setItem("printer", printer);
+            swal("Printer device saved succesfully");
+            window.location.href = "layout.html";
+        }
+
+        function logout() {
+            storage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

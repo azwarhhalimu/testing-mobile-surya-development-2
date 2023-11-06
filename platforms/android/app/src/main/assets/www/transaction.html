@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en" data-textdirection="ltr" class="loading">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<title>SURYA EXPRESS MANTAP</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+		type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+	<!-- Bootstrap Core Css -->
+	<link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Waves Effect Css -->
+	<link href="plugins/node-waves/waves.css" rel="stylesheet" />
+
+	<!-- Animation Css -->
+	<link href="plugins/animate-css/animate.css" rel="stylesheet" />
+
+	<!-- Sweetswal Css -->
+	<link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+	
+	<!-- Sweetswal Css -->
+    <link href="plugins/bootstrap-select2/css/select2.css" rel="stylesheet" />
+	
+	 <!-- Bootstrap Material Datetime Picker Css -->
+	 <link href="plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+
+	<!-- Custom Css -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/autocomplate.css" rel="stylesheet">
+
+	<!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+	<link href="css/themes/all-themes.css" rel="stylesheet" />
+	
+	<style>
+		.bg-error{
+			background-color:#FFFFD4 !important;
+		}
+
+		input::-webkit-calendar-picker-indicator {
+			opacity: 100;
+		}
+
+		.sweet-alert button.cancel {
+			background-color:red;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		//var localhost = "http://localhost:8000";
+		var localhost = "https://old-fast.klikrumahaja.com";
+		var storage = window.localStorage;
+		var profile_name = storage.getItem("name");
+		var profile_email = storage.getItem("email");
+		var profile_password = storage.getItem("password");
+		var profile_printer = storage.getItem("printer");
+		var profile_branch_id = storage.getItem("branch_id");
+		var profile_branch_name = storage.getItem("branch_name");
+
+
+		if (profile_name == null || profile_name == "") {
+			storage.clear();
+			window.location.href = "login.html";
+		}
+
+		if (profile_printer == null || profile_printer == "") {
+			window.location.href = "setting.html";
+		}
+	</script>
+</head>
+
+<body class="theme-red">
+	<!-- Page Loader -->
+	<div class="page-loader-wrapper">
+		<div class="loader">
+			<div class="preloader">
+				<div class="spinner-layer pl-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+			<p>Please wait...</p>
+		</div>
+	</div>
+	<!-- #END# Page Loader -->
+	<!-- Overlay For Sidebars -->
+	<div class="overlay"></div>
+	<!-- #END# Overlay For Sidebars -->
+	<!-- Top Bar -->
+	<nav class="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="javascript:void(0);" class="bars"></a>
+				<a class="navbar-brand" href="javascript:void(0);"> &nbsp; SURYA EXPRESS MANTAP</a>
+			</div>
+		</div>
+	</nav>
+	<!-- #Top Bar -->
+	<section>
+		<!-- Left Sidebar -->
+		<aside id="leftsidebar" class="sidebar">
+			<!-- User Info -->
+			<div class="user-info">
+				<div class="image">
+					<img src="images/user.png" width="48" height="48" alt="User" />
+				</div>
+				<div class="info-container">
+					<div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="profile_name"></div>
+					<div class="email" id="profile_email"></div>
+					<div class="btn-group user-helper-dropdown">
+						<i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="true">keyboard_arrow_down</i>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="change.html"><i class="material-icons">vpn_key</i>Change Password</a></li>
+							<li><a href="javascript:logout();"><i class="material-icons">input</i>Sign Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- #User Info -->
+			<!-- Menu -->
+			<div class="menu">
+				<ul class="list">
+					<li class="header">MAIN NAVIGATION</li>
+					<li id="setting_kurs" style="display:none">
+						<a href="#">
+							<i class="material-icons">language</i>
+							<span>KURS: <label id="current_kurs">0</label></span>
+						</a>
+					</li>
+					<li>
+						<a href="layout.html">
+							<i class="material-icons">home</i>
+							<span>HOME</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="transaction.html">
+							<i class="material-icons">assignment_turned_in</i>
+							<span>TRANSACTION</span>
+						</a>
+					</li>
+					<li>
+						<a href="member.html">
+							<i class="material-icons">people</i>
+							<span>MEMBER</span>
+						</a>
+					</li>
+
+					<li>
+                        <a href="identity.html">
+                            <i class="material-icons">camera_alt</i>
+                            <span>CAPTURE</span>
+                        </a>
+                    </li>
+
+					<li>
+						<a href="register.html">
+							<i class="material-icons">group_add</i>
+							<span>NEW MEMBER</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="invoice.html">
+							<i class="material-icons">assessment</i>
+							<span>CHECK INVOICE</span>
+						</a>
+					</li>
+
+					<li>
+                        <a href="detail_transaction.html">
+                            <i class="material-icons">analytics</i>
+                            <span>DETAIL TRANSACTION</span>
+                        </a>
+                    </li>
+
+					<li>
+						<a href="beneficiary.html">
+							<i class="material-icons">show_chart</i>
+							<span>BENEFICIARY</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="print.html">
+							<i class="material-icons">print</i>
+							<span>RE-PRINT</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="setting.html">
+							<i class="material-icons">settings</i>
+							<span>SETTING</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- #Menu -->
+			<!-- Footer -->
+			<div class="legal">
+				<div class="copyright">
+					&copy; 2021 <a href="javascript:void(0);">SURYA EXPRESS MANTAP</a>.
+				</div>
+				<div class="version">
+					<b>Version: </b> 2.0.17
+
+				</div>
+			</div>
+			<!-- #Footer -->
+		</aside>
+		<!-- #END# Left Sidebar -->
+
+	</section>
+
+	<section class="content">
+		<div class="container-fluid">
+			<!-- Input -->
+			<div class="row clearfix">
+				<form id="sign_in" onsubmit="return false">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div>
+							<div class="header">
+								<h2>
+									TRANSACTION<br>
+									<small>New Transaction Request</small>
+								</h2>
+								<br>
+							</div>
+							<div class="body">
+								<div class="card-block">
+									<div class="row clearfix">
+										<div class="col-md-12" id="page1">
+											<div class="form-body">
+												<div class="row">
+													<div class="col-xs-6 col-md-6">
+														<h4 class="form-section"><i class="icon-android-contact"></i> FORM MEMBER</h4>
+													</div>
+													<div class="col-xs-6 col-md-6 text-right">
+														<a href="javascript:void(0);" onclick="refresh()"><i class="material-icons">refresh</i></a>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group form-line">
+															<div class="form-line">
+																<label for="projectinput1">TRANSACTION LIMIT </label>
+																<input type="text" class="form-control" id="transaction_limit" name="transaction_limit" placeholder="TRANSACTION LIMIT" disabled></select>
+																<input type="hidden" id="setting_hotline" name="setting_hotline">
+																<input type="hidden" id="hotline" name="hotline">
+																<input type="hidden" id="title" name="title">
+																<input type="hidden" id="footer" name="footer">
+																<input type="hidden" id="show_destination" name="show_destination">
+																<input type="hidden" id="show_source_of_funds" name="show_source_of_funds">
+																<input type="hidden" id="show_hkd_fee" name="show_hkd_fee">
+																<input type="hidden" id="show_total_hkd" name="show_total_hkd">
+																<input type="hidden" id="show_admin_idr" name="show_admin_idr">
+																<input type="hidden" id="security" name="security">
+															</div>
+														</div>
+													</div>
+													<br>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group form-line">
+															<div class="form-line">
+																<label for="projectinput1">BRANCH NAME </label>
+																<input type="hidden" id="branch_id" name="branch_id">
+																<input type="text" class="form-control" id="branch_name" name="branch_name" placeholder="BRANCH NAME" disabled></select>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div>
+																<label for="projectinput1">IDENTITY TYPE (HK ID / PASSPORT) </label>
+																<div class="demo-radio-button">
+																	<input name="group1" type="radio" id="member_type_1" value="1" checked />
+																	<label for="member_type_1">HK ID</label>
+																	<input name="group1" type="radio" id="member_type_2" value="2" />
+																	<label for="member_type_2">PASSPORT</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group form-line">
+															<div class="form-line">
+																<label for="projectinput1">MEMBER ID </label>
+																<input type="hidden" id="member_email" name="member_email">
+																<input type="text" id="member_id" class="form-control member custom" placeholder="MEMBER ID"
+																	name="member_id" maxlength="50" required>
+																
+															</div>
+
+															<small>Identification ID (HK ID / PASSPORT)</small>
+														</div>
+													</div>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">MEMBER NAME</label>
+																<input type="text" id="member_name" class="form-control" placeholder="MEMBER NAME"
+																	name="member_name" maxlength="255" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">REMARK</label>
+																<textarea type="text" id="remark" class="form-control" placeholder="Remark" id="remark" name="remark" disabled></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">MEMBER HK PHONE (852)</label>
+																<input type="text" id="member_phone" class="form-control"
+																	placeholder="Example : 852899359XXX" name="member_phone" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">WHATSAPP NO (852)</label>
+																<input type="text" id="whatsapp_no" class="form-control"
+																	placeholder="Example : 852899359XXX" name="whatsapp_no" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">MEMBER ADDRESS</label>
+																<textarea type="text" id="member_address" class="form-control"
+																	placeholder="MEMBER ADDRESS" name="member_address" rows="5" required></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">MEMBER BIRTH <br> <small style="font-size:8px">(Format: YYYY-MM-DD)</small></label>
+																<input type="text" id="member_birth" class="form-control" placeholder="YYYY-MM-DD" name="member_birth" placeholder="Ex: 30/07/2016" required>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<h4 class="form-section"><i class="icon-android-people"></i> DETAIL RECIPIENT</h4>
+												<hr>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<label for="projectinput1">CHOOSE RECIPIENT </label>
+															<select type="text" id="choose_recepient" class="form-control" name="choose_recepient">
+															</select>
+														</div>
+													</div>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput1">RECIPIENT NAME </label>
+																<input type="hidden" id="recepient_id" name="recepient_id">
+																<input type="text" id="recepient_name" class="form-control" placeholder="RECEPIENT NAME"
+																	name="recepient_name" maxlength="255" required>
+															</div>
+														</div>
+													</div>
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">RELATIONSHIP</label>
+																<select type="text" id="relationalship" class="form-control" placeholder="RELATIONSHIP"
+																	name="relationalship" maxlength="255" required>
+																</select>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">RECIPIENT PHONE</label>
+																<input type="text" id="recepient_hp" class="form-control" placeholder="Example : 628993599XXX"
+																	name="recepient_hp" maxlength="50" required>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">CITY</label>
+																<input type="text" id="city" class="form-control" placeholder="CITY"
+																	name="city" minlength="5" maxlength="255" required>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">RECIPIENT ADDRESS</label>
+																<textarea type="text" id="recepient_address" class="form-control"
+																	placeholder="RECEPIENT ADDRESS" name="recepient_address" rows="5" minlength="5" required></textarea>
+															</div>
+														</div>
+													</div>
+
+													<!-- <div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput2">RECIPIENT BIRTH</label>
+																<input type="text" id="recepient_birth" class="form-control" placeholder="Ex: 2016-01-01" name="recepient_birth" required>
+															</div>
+														</div>
+													</div> -->
+												</div>
+												<h4 class="form-section"><i class="icon-android-people"></i> BANK</h4>
+												<hr>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<label for="projectinput3">BANK</label>
+															<select id="bank_id" class="form-control" name="bank_id" required>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">BANK BRANCH</label>
+																<input type="text" id="bank_branch" class="form-control" placeholder="BANK BRANCH"
+																	name="bank_branch" maxlength="255">
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">ACCOUNT NUMBER</label>
+																<input type="tel" id="account_number" class="form-control"
+																	placeholder="ACCOUNT NUMBER" name="account_number" maxlength="50" pattern="\d*" required>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<h4 class="form-section"><i class="icon-android-people"></i> DATA TRANSFER</h4>
+												<hr>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div>
+																<label for="projectinput3">TRANSFER TYPE</label>
+																<input id="transfer_type" class="form-control" name="transfer_type" class="form-control" value="UrgentXX" disabled>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">TRANSFER VALUE (HKD)</label>
+																<input type="number" id="transfer_value" class="form-control"
+																	placeholder="TRANSFER VALUE (HKD)" name="transfer_value" maxlength="11" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">KURS</label>
+																<input type="text" id="kurs" class="form-control" placeholder="KURS" name="kurs" disabled>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">TOTAL IDR</label>
+																<input type="text" id="idr" class="form-control" placeholder="TOTAL IDR" name="idr"
+																	disabled>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">FEE TRANSFER (HKD)</label>
+																<input type="text" id="fee_transfer" class="form-control"
+																	placeholder="FEE TRANSFER (HKD)" name="fee_transfer" disabled>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">PAID TRANSFER</label>
+																<input type="text" id="paid_transfer" class="form-control" placeholder="PAID TRANSFER"
+																	name="paid_transfer" disabled>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">PURPOSE</label>
+																<select id="destination" name="destination" class="form-control" placeholder="PURPOSE">
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="form-line">
+																<label for="projectinput3">SOURCE OF FUNDS</label>
+																<select id="source_of_funds" class="form-control" name="source_of_funds" placeholder="Source of Funds">
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row" id="upload-attachment" style="display: none;">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<input type="hidden" id="over" name="over">
+															<input type="hidden" id="current_transaction" name="current_transaction" value="0">
+															<input type="hidden" id="attachment" name="attachment">
+															<button type="button" id="contract" class="btn btn-danger" name="contract"><i class="material-icons">camera</i>CAPTURE</button>
+															<img src="img/no-image.svg" id='img' style="width: 100%; height: 100%; padding:5px">
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-xs-12 col-md-12">
+														<div class="form-group">
+															<div class="right" style="float:right;padding-bottom:10px">
+																<button type="button" class="btn btn-warning" id="scroll-top">
+																	<i class="material-icons">arrow_upward</i> SCROLL TOP
+																</button>
+																<button type="submit" class="btn btn-primary" onclick="verify()">
+																	<i class="material-icons">cloud_upload</i> SUBMIT
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- #END# Input -->
+		</div>
+	</section>
+
+	<div class="modal fade text-xs-left" id="default" tabindex="-1" role="dialog" data-backdrop="static"
+		data-keyboard="false" aria-labelledby="myModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel1">VERIFICATION</h4>
+				</div>
+				<form id="verify_in" onsubmit="return false">
+					<input type="hidden" id="v_branch_name" disabled>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<div class="form-group">
+									<label for="projectinput1">DATE</label>
+									<input type="text" id="v_date" class="form-control" placeholder="DATE" name="v_date" disabled>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<div class="form-group">
+									<label for="projectinput2">NUMBER</label>
+									<input type="text" id="v_number" class="form-control" placeholder="NUMBER" name="v_number" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-md-6">
+								<div class="form-group">
+									<label for="projectinput3">KURS</label>
+									<input type="text" id="v_kurs" class="form-control" placeholder="KURS" name="v_kurs" disabled>
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-6">
+								<div class="form-group">
+									<label for="projectinput4">FEE</label>
+									<input type="text" id="v_fee" class="form-control" placeholder="FEE" name="v_fee" disabled>
+								</div>
+							</div>
+						</div>
+						<h4 class="form-section"><i class="icon-android-contact"></i> MEMBER</h4>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput1">MEMBER ID </label>
+									<input type="text" id="v_member_id" class="form-control" placeholder="MEMBER ID" name="v_member_id"
+										maxlength="50" disabled>
+									<small>Identification ID (HK ID, KTP, PASSPORT)</small>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput2">MEMBER NAME</label>
+									<input type="text" id="v_member_name" class="form-control" placeholder="MEMBER NAME"
+										name="v_member_name" maxlength="255" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">MEMBER HK PHONE(+852)</label>
+									<input type="text" id="v_member_phone" class="form-control" placeholder="MEMBER HK PHONE(+852)"
+										name="v_member_phone" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">MEMBER ADDRESS</label>
+									<textarea type="text" id="v_member_address" class="form-control" placeholder="MEMBER ADDRESS"
+										name="v_member_address" rows="5" disabled></textarea>
+								</div>
+							</div>
+						</div>
+						<h4 class="form-section"><i class="icon-android-people"></i> DETAIL RECEPIENT</h4>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput1">RECEPIENT NAME </label>
+									<input type="text" id="v_recepient_name" class="form-control" placeholder="RECEPIENT NAME"
+										name="recepient_name" disabled>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput2">RECEPIENT PHONE</label>
+									<input type="text" id="v_recepient_hp" class="form-control" placeholder="RECEPIENT PHONE"
+										name="recepient_hp" disabled>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput2">RECEPIENT ADDRESS</label>
+									<textarea type="text" id="v_recepient_address" class="form-control" placeholder="RECEPIENT ADDRESS"
+										name="recepient_address" rows="5" disabled></textarea>
+								</div>
+							</div>
+						</div>
+						<h4 class="form-section"><i class="icon-android-people"></i> BANK</h4>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">BANK</label>
+									<input id="v_bank_id" class="form-control" placeholder="BANK" name="v_bank_id" disabled>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">BANK BRANCH</label>
+									<input type="text" id="v_bank_branch" class="form-control" placeholder="BANK BRANCH"
+										name="v_bank_branch" disabled>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">ACCOUNT NUMBER</label>
+									<input type="text" id="v_account_number" class="form-control" placeholder="ACCOUNT NUMBER"
+										name="v_account_number" disabled>
+								</div>
+							</div>
+						</div>
+
+						<h4 class="form-section"><i class="icon-android-people"></i> DATA TRANSFER</h4>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">TRANSFER VALUE (HKD)</label>
+									<input type="text" id="v_transfer_value" class="form-control" placeholder="TRANSFER VALUE (HKD)"
+										name="v_transfer_value" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<label for="projectinput3">TOTAL IDR</label>
+									<input type="text" id="v_idr" class="form-control" placeholder="TOTAL IDR" name="v_idr" disabled>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<div class="form-line">
+										<label for="projectinput3">PRINTER MAC ADDRESS</label>
+										<br>
+										<label for="projectinput3" id="printer"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<div class="form-line">
+										<label for="projectinput3">PASSWORD</label>
+										<input type="password" id="password" class="form-control" placeholder="PASSWORD" name="password" autocomplete="off" required>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-warning" data-dismiss="modal"> <i
+								class="material-icons">arrow_back</i>BACK</button>
+						<button type="submit" class="btn btn-primary" onclick="save()"><i class="material-icons">flag</i>
+							VERIFY</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="preloader" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 99000;background: #2222;overflow: hidden;display:none;">
+		<div style="position: relative; left:40%; top: 50%;padding:5px;color:black;width: 150px;">
+			<div class="loader text-center">
+				<div class="preloader">
+					<div class="spinner-layer pl-red">
+						<div class="circle-clipper left">
+							<div class="circle"></div>
+						</div>
+						<div class="circle-clipper right">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+				<p>Loading...</p>
+			</div>
+		</div>
+	</div>
+		
+
+	<!-- Jquery Core Js -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Core Js -->
+	<script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+	<!-- Slimscroll Plugin Js -->
+	<script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+	<!-- Waves Effect Plugin Js -->
+	<script src="plugins/node-waves/waves.js"></script>
+
+	<!-- Jquery CountTo Plugin Js -->
+	<script src="plugins/jquery-countto/jquery.countTo.js"></script>
+
+	<!-- Input Mask Plugin Js -->
+	<script src="plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+	<!-- Sparkline Chart Plugin Js -->
+	<script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+	<!-- Validation Plugin Js -->
+	<script src="plugins/jquery-validation/jquery.validate.js"></script>
+
+	<!-- Sweetswal Plugin Js -->
+	<script src="plugins/sweetalert/sweetalert.min.js"></script>
+
+	<script src="plugins/bootstrap-select2/js/select2.full.js"></script>
+
+	<!-- Moment Plugin Js -->
+	<script src="plugins/momentjs/moment.js"></script>
+
+	<script src="plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+	<!-- Custom Js -->
+	<script src="js/admin.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.autocomplete.js"></script>
+	<!-- Demo Js -->
+	<script src="js/demo.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+
+	
+	<!-- Modal -->
+	<script type="text/javascript">
+		var macAddress = profile_printer;
+		var app = {
+			initialize: function () {
+				this.bindEvents();
+			},
+			bindEvents: function () {
+				document.addEventListener('deviceready', this.onDeviceReady, false);
+			},
+			onDeviceReady: function () {
+				storage.setItem("printer", macAddress);
+				bluetoothSerial.isEnabled(
+					function () {
+						console.log("Bluetooth is enabled");
+						bluetoothSerial.clear(function(){}, function(){});
+						bluetoothSerial.disconnect(function(){}, function(){});
+						bluetoothSerial.connect(macAddress, app.onConnect, app.onDisconnect);
+					},
+					function () {
+						console.log("Bluetooth is *not* enabled");
+					}
+				);
+			},
+			onConnect: function () {
+				swal("Printer Ready..");
+			},
+			onDisconnect: function () {
+				swal("Printer Device " + macAddress + " disconnected, make sure your phone connected to printer device");
+				window.location.href = "setting.html";
+			},
+		};
+
+		function setting_hotline(){
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/setting_hotline",
+				data: {
+					branch_id:storage.getItem("branch_id"),
+				},
+				dataType: "json",
+				success: function (response) {
+					$("#setting_hotline").val(response.status);
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("Please reload page and check your connection...");
+				}
+			});
+		}
+
+		$(document).ready(function () {
+			app.initialize();
+			setting_hotline();
+			$("#recepient_id").val("IDN"+jw());
+			$("#printer").text(macAddress);
+			$("#profile_name").html(profile_name);
+			$("#profile_email").html(profile_email);
+			$('.credit-card').inputmask('9999-9999-9999-9999', { placeholder: '    -    -    -    ' });
+			$('#sign_in').validate({
+				highlight: function (input) {
+					console.log(input);
+					$(input).parents('.form-line').addClass('error');
+					$(input).addClass('bg-error');
+				},
+				unhighlight: function (input) {
+					$(input).parents('.form-line').removeClass('error');
+					$(input).removeClass('bg-error');
+				},
+				errorPlacement: function (error, element) {
+					$(element).parents('.form-group').append(error);
+				}
+			});
+
+			$('#sign_in').valid();
+
+			$('#verify_in').validate({
+				highlight: function (input) {
+					console.log(input);
+					$(input).parents('.form-line').addClass('error');
+				},
+				unhighlight: function (input) {
+					$(input).parents('.form-line').removeClass('error');
+				},
+				errorPlacement: function (error, element) {
+					$(element).parents('.form-group').append(error);
+				}
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			bank();
+			kurs();
+			setTimeout(function(){
+				$("#branch_id").val(profile_branch_id);
+				$("#branch_name").val(profile_branch_name);
+				settingId(profile_branch_id);
+				transfer_type(profile_branch_id);
+			},500);
+			
+			function transfer_type(branch_id){
+				$.ajax({
+					method: "GET",
+					url: localhost + "/api/mobile/getBranchId",
+					data: {
+						id: branch_id
+					},
+					dataType: "json",
+					success: function (response) {
+						if (response.status) {
+							var data = response.data;
+							$("#source_of_funds").empty();
+							$("#destination").empty();
+							$("#relationalship").empty();
+
+							$("#source_of_funds").append("<option value=''>No Selected</option>");
+							$("#destination").append("<option value=''>No Selected</option>");
+							$("#relationalship").append("<option value=''>No Selected</option>");
+
+							$("#source_of_funds").append(response.sources);
+							$("#destination").append(response.destinations);
+							$("#relationalship").append(response.relationalships);
+			
+							$("#security").val(data.security);
+							
+							if (data != null) {
+								var hotline = data.hotline;
+								var title = data.title;
+								var footer = data.footer;
+
+								$("#hotline").val(hotline);
+								$("#title").val(title);
+								$("#footer").val(footer);
+
+								if (data.urgentxx) 
+								{
+									$("#fee_transfer").val(toCurrency(data.fee));
+								} else {
+									$("#fee_transfer").val(0);
+								}
+							}
+						}
+					},
+					error: function (xhr, status, errorThrown) {
+						swal("error","Branch data not retrieved, connection failed","error");
+					}
+				});
+			}
+
+			$("#choose_recepient").change(function () {
+				var value = $("#choose_recepient").val();
+				if(value == ""){
+					$("#recepient_id").val("");
+					$("#recepient_name").val("");
+					$("#recepient_address").val("");
+					$("#recepient_hp").val("");
+					$("#city").val("");
+					$("#relationalship").val("");
+					$("#account_no").val("");
+					$("#bank_id").val("");
+					$("#bank_branch").val("");
+					$("#account_number").val("");
+					$("#recepient_birth").val("");
+
+					$("#v_recepient_name").val("");
+					$("#v_recepient_address").val("");
+					$("#v_recepient_hp").val("");
+					$("#v_city").val("");
+					$("#v_account_no").val("");
+					$("#v_bank_id").val("");
+					$("#v_bank_branch").val("");
+					$("#v_account_number").val("");
+					return;
+				}
+
+				var id = this.value;
+				singleScreening(id);
+				$.ajax({
+					method: "GET",
+					url: localhost + "/api/mobile/getRecepientId",
+					data: {
+						id: id
+					},
+					dataType: "json",
+					success: function (response) {
+						if (response.status) {
+							var data = response.data;
+							if (data != null) {
+								$("#recepient_id").val(data.recepient_id);
+								$("#recepient_name").val(data.recepient_name);
+								$("#recepient_address").val(data.recepient_address);
+								$("#recepient_hp").val(data.recepient_hp);
+								$("#city").val(data.city);
+								$("#relationalship").val(data.relationalship);
+								$("#account_no").val(data.account_no);
+								$("#bank_id").val(data.bank_id);
+								$("#bank_branch").val(data.bank_branch);
+								$("#account_number").val(data.account_number);
+								$("#recepient_birth").val(data.recepient_birth);
+
+								$("#v_recepient_name").val(data.recepient_name);
+								$("#v_recepient_address").val(data.recepient_address);
+								$("#v_recepient_hp").val(data.recepient_hp);
+								$("#v_city").val(data.city);
+								$("#v_account_no").val(data.account_no);
+								$("#v_bank_id").val(data.bank_id);
+								$("#v_bank_branch").val(data.bank_branch);
+								$("#v_account_number").val(data.account_number);
+							}
+						}
+					},
+					error: function (xhr, status, errorThrown) {
+						swal("error","Recepient data not retrieved, connection timeout","error");
+					}
+				});
+			});
+
+			function settingId(id){
+				$.ajax({
+					method: "GET",
+					url: localhost + "/api/mobile/getSettingId",
+					data: {
+						id: id
+					},
+					dataType: "json",
+					success: function (response) {
+						if (response.status) {
+							var data = response.data;
+							if (data != null) {
+								$("#kurs").val(toCurrency(data.kurs_today));
+								$("#transaction_limit").val(data.transaction_limit);
+							}
+						}
+					},
+					error: function (xhr, status, errorThrown) {
+						swal("error","Setting data not retrieved, connection timeout","error");
+					}
+				});
+			}
+
+			function toInt(currency) {
+				return currency.replace(/[$,]+/g, "");
+			}
+
+			$(".formattedNumberField").on('keydown', function () {
+				var n = parseInt($(this).val().replace(/\D/g, ''), 10);
+				if (n == null || n == '' || n == "NaN" || n == NaN || isNaN(n)) {
+					$(this).val(0);
+				} else {
+					$(this).val(n.toLocaleString());
+				}
+			});
+
+			$("#transfer_value").keyup(function () {
+				var type = $("#transfer_type").val();
+				var transfer_value = parseInt(toInt(this.value));
+				var kurs = toInt($("#kurs").val());
+				var total_idr = (transfer_value * kurs);
+				var fee = toInt($("#fee_transfer").val());
+				var paid = parseInt(transfer_value) + parseInt(fee);
+
+				if(total_idr < 1){
+					$("#idr").val(toCurrency(0));
+				}else{
+					$("#idr").val(toCurrency(total_idr));
+				}
+
+				var over = $("#over").val();
+				var current_transaction = parseInt($("#current_transaction").val());
+				var pembanding = 7801;
+
+				// if(current_transaction > 0){
+				// 	pembanding = 7801;
+				// }
+
+				var calculate = transfer_value + current_transaction;
+				
+				if(calculate >= pembanding){
+					swal('NEED CONTRACT OR ADDRESS','Warning','warning');
+					$("#over").val("WARNING");
+					$("#upload-attachment").show();
+				}else{
+					$("#over").val("OPEN");
+					$("#upload-attachment").hide();
+				}
+				
+				$("#fee_transfer").val(toCurrency(fee));
+				$("#paid_transfer").val(toCurrency(paid));
+
+				$("#v_kurs").val(toCurrency(kurs));
+				$("#v_fee").val(toCurrency(fee));
+			});
+
+
+			$("#scroll-top").click(function () {
+				window.scrollTo(0, 0);
+			});
+
+			$("#v_date").val(today());
+			$("#v_number").val("JW" + jw());
+		});
+
+		function refresh() {
+			location.reload();
+		}
+
+		function nextInvoice() {
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/nextInvoice",
+				data: {'branch_id':profile_branch_id},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+						var sequence = response.sequence;
+						var invoice_tab = response.invoice_tab;
+
+						$("#sequence").val(sequence);
+						$("#invoice_tab").val(invoice_tab);
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Setting data not retrieved, connection timeout","error");
+				}
+			});
+		}
+
+		function verify() {
+
+			var branch_id = $("#branch_id").val();
+			var member_id = $("#member_id").val();
+			var member_name = $("#member_name").val();
+			var member_phone = $("#member_phone").val();
+			var member_address = $("#member_address").val();
+
+			var recepient_name = $("#recepient_name").val();
+			var recepient_address = $("#recepient_address").val();
+			var recepient_hp = $("#recepient_hp").val();
+			var city = $("#city").val();
+			var relationalship = $("#relationalship").val();
+			var bank_id = $("#bank_id").val();
+			var bank_branch = $("#bank_branch").val();
+			var account_number = $("#account_number").val();
+
+			var idr = $("#idr").val();
+			var fee_transfer = $("#fee_transfer").val();
+			var paid = $("#paid_transfer").val();
+			var transfer_type = $("#transfer_type").val();
+			var transfer_value = $("#transfer_value").val();
+			var source_of_funds = $("#source_of_funds").val();
+			var destination = $("#destination").val();
+
+			var whatsapp_no = $("#whatsapp_no").val();
+
+			var nama = $("#recepient_name").val();
+			var birth = $("#recepient_birth").val();
+			var security = $("#security").val();
+			
+			if(security == "1"){
+				dowjones(nama);
+			}else{
+				singleScreening(nama);
+			}
+
+			// member
+			$("#v_member_id").val(member_id);
+			$("#v_member_name").val(member_name);
+			$("#v_member_phone").val(member_phone);
+			$("#v_member_address").val(member_address);
+			//recepient
+			$("#v_recepient_name").val(recepient_name);
+			$("#v_recepient_address").val(recepient_address);
+			$("#v_recepient_hp").val(recepient_hp);
+			$("#v_city").val(city);
+			$("#v_account_number").val(account_number);
+			$("#v_bank_id").val($("#bank_id").find(':selected').text());
+			$("#v_bank_branch").val(bank_branch);
+			$("#v_account_number").val(account_number);
+			$("#v_branch_name").val($("#branch_name").val());
+			//transfer value
+			$("#v_idr").val(idr);
+			$("#v_transfer_value").val(toCurrency(transfer_value));
+
+			var over= $("#over").val();
+
+			if("WARNING" == over){
+				var imgBase64 = $("#attachment").val();
+
+				if( imgBase64 == "" || imgBase64 == null || imgBase64 == undefined ){
+					swal("error", "Contract or Address should not empty", "error");
+					$('.page-loader-wrapper').fadeOut();
+					return;
+				}
+			}
+
+			if (branch_id == null || branch_id == "") {
+				swal("error","Branch ID should not empty", "error");
+				return;
+			}
+
+			if (member_id == null || member_id == "") {
+				swal("error","Member ID should not empty", "error");
+				return;
+			}
+
+			if (member_name == null || member_name == "") {
+				swal("error","Member Name should not empty", "error");
+				return;
+			}
+
+			if (member_phone == null || member_phone == "") {
+				swal("error","Member Phone should not empty"), "error";
+				return;
+			}
+
+			if (whatsapp_no == null || whatsapp_no == "") {
+				swal("error","Whatsapp No should not empty"), "error";
+				return;
+			}
+
+			if (member_address == null || member_address == "") {
+				swal("error","Member Address should not empty", "error");
+				return;
+			}
+
+			if (recepient_name == null || recepient_name == "") {
+				swal("error","Recepient Name should not empty", "error");
+				return;
+			}
+
+			if (recepient_address == null || recepient_address == "") {
+				swal("error","Recepient Address should not empty", "error");
+				return;
+			}
+
+			if (recepient_address && recepient_address.length < 5) {
+				swal("error","Recepient Address, please enter at least 5 characters.", "error");
+				return;
+			}
+
+			if (recepient_hp == null || recepient_hp == "") {
+				swal("error","Recepient Handphone should not empty", "error");
+				return;
+			}
+
+			if (city == null || city == "") {
+				swal("error","City should not empty", "error");
+				return;
+			}
+
+			if (city && city.length < 5) {
+				swal("error","City, please enter at least 5 characters.", "error");
+				return;
+			}
+
+			if (relationalship == null || relationalship == "") {
+				swal("error","Relationship should not empty", "error");
+				return;
+			}
+
+			if (bank_id == null || bank_id == "") {
+				swal("error","Bank ID should not empty", "error");
+				return;
+			}
+
+			if (account_number == null || account_number == "") {
+				swal("error","Account Number should not empty", "error");
+				return;
+			}
+
+			if (idr == null || idr == "") {
+				swal("error","Total IDR should not empty", "error");
+				return;
+			}
+
+			if (fee_transfer == null || fee_transfer == "") {
+				swal("error","Fee Transfer should not empty", "error");
+				return;
+			}
+
+			if (paid == null || paid == "") {
+				swal("error","Paid should not empty", "error");
+				return;
+			}
+
+			if (transfer_value == null || transfer_value == "") {
+				swal("error","Transfer Value should not empty", "error");
+				return;
+			}
+
+			if (destination == null || destination == "") {
+				swal("error","Purpose should not empty", "error");
+				return;
+			}
+
+			if (source_of_funds == null || source_of_funds == "") {
+				swal("error","Source of funds should not empty", "error");
+				return;
+			}
+
+		
+
+			var tfv = parseInt(transfer_value);
+			var tlv = parseInt($("#transaction_limit").val());
+
+			if(tfv > tlv){
+				swal("Max Transfer is " + $("#transaction_limit").val());
+				return;
+			}
+
+			$("#default").modal('show');
+		}
+
+		function today() {
+			var date = new Date();
+			var aaaa = date.getFullYear();
+			var gg = date.getDate();
+			var mm = date.getMonth();
+			var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+			if (gg < 10)
+				gg = "0" + gg;
+
+		
+
+			var cur_day = gg + "-" + months[mm] + "-" + aaaa;
+
+			var hours = date.getHours()
+			var minutes = date.getMinutes()
+			var seconds = date.getSeconds();
+
+			if (hours < 10)
+				hours = "0" + hours;
+
+			if (minutes < 10)
+				minutes = "0" + minutes;
+
+			if (seconds < 10)
+				seconds = "0" + seconds;
+
+			return cur_day + " " + hours + ":" + minutes + ":" + seconds;
+		}
+
+		function jw() {
+			var date = new Date();
+			var aaaa = date.getFullYear();
+			var gg = date.getDate();
+			var mm = (date.getMonth() + 1);
+
+			if (gg < 10)
+				gg = "0" + gg;
+
+			if (mm < 10)
+				mm = "0" + mm;
+
+			var cur_day = aaaa  + mm  + gg;
+
+			var hours = date.getHours()
+			var minutes = date.getMinutes()
+			var seconds = date.getSeconds();
+
+			if (hours < 10)
+				hours = "0" + hours;
+
+			if (minutes < 10)
+				minutes = "0" + minutes;
+
+			if (seconds < 10)
+				seconds = "0" + seconds;
+
+			return cur_day + hours  + minutes  + seconds;
+		}
+
+		function setting(id) {
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/getSettingId",
+				data: {
+					id: id
+				},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+						var data = response.data;
+						if (data != null) {
+							$("#kurs").val(toCurrency(data.kurs_today));
+						}
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Setting data not retrieved, connection timeout","error");
+				}
+			});
+		}
+
+		function bank() {
+			$("#bank_id").empty();
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/getBank",
+				data: {},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+						var data = response.data;
+						if (data != null && data.length > 0) {
+							$("#bank_id").append("<option value=''>No Selected</option>")
+							for (var i = 0; i < data.length; i++) {
+								$("#bank_id").append("<option value='" + data[i].id + "'>" + data[i].bank_name + "</option>")
+							}
+						}
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Bank data not retrieved, connection timeout","error");
+				}
+			});
+		}
+
+		function kurs() {
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/getKurs",
+				data: {},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+						var data = response.data;
+						if (data != null) {
+							$("#current_kurs").html(toCurrency(data.kurs_today));
+							return $("#kurs").val(toCurrency(data.kurs_today));
+						} else {
+							return $("#kurs").val(0);
+						}
+
+					} else {
+						return $("#kurs").val(0);
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Kurs data not retrieved, connection timeout","error");
+				}
+			});
+		}
+
+		function toCurrency(number) {
+			var n = parseInt(number);
+			return n.toLocaleString('en-us');
+		}
+
+		function toString(s) {
+			return s + "";
+		}
+
+		function toInt(currency) {
+			return currency.replace(/[$,]+/g, "").replace(/[$.]+/g, "");
+		}
+		
+		function singleScreening(id) {
+			var name = $("#recepient_name").val();
+			var branch = $("#branch_id").val();
+			var security = $("#security").val();
+
+			$.ajax({
+				method: "GET",
+				url: localhost + "/api/mobile/singleScreening?id="+id+"&name="+name+"&branch="+branch,
+				data: {
+			
+				},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+
+						var text = "This recipient in alert RBA wants to continue ?";
+						if("1" == security){
+							text = "This recipient in alert Dowjones, wants to continue ?";
+						}
+
+						swal({
+							title: "WARNING!!",
+							text: text,
+							type: "info",
+							showCancelButton: true,
+							confirmButtonClass: "btn-danger",
+							confirmButtonText: "Continue",
+							cancelButtonText: "Invalid",
+							closeOnConfirm: true,
+							closeOnCancel: true
+						},
+						function(isConfirm) {
+							if (!isConfirm) {
+								window.location.href = "transaction.html";
+							}
+						});
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Kurs data not retrieved, connection timeout","error");
+				}
+			});
+		}
+
+
+		$('.datepicker').bootstrapMaterialDatePicker({
+            format: 'YYYY-MM-DD',
+            clearButton: true,
+            weekStart: 1,
+            time: false,
+			defaultDate:new Date('1980-01-01')
+        });
+
+		function save() {
+		
+			var password = $("#password").val();
+			if (password != profile_password) {
+				swal("error", "Wrong password, please try again..","error");
+				return;
+			}
+
+			$('.page-loader-wrapper').fadeIn();
+			var name = storage.getItem("name");
+	
+			var branch_id = $("#branch_id").val();
+			var member_id = $("#member_id").val();
+			var member_name = $("#member_name").val();
+			var member_phone = $("#member_phone").val();
+			var member_email = $("#member_email").val();
+			var member_address = $("#member_address").val();
+
+			var whatsapp_no = $("#whatsapp_no").val();
+
+			var recepient_id = $("#recepient_id").val();
+			var recepient_name = $("#recepient_name").val();
+			var recepient_address = $("#recepient_address").val();
+			var recepient_hp = $("#recepient_hp").val();
+			var city = $("#city").val();
+			var relationalship = $("#relationalship").val();
+			var bank_id = $("#bank_id").val();
+			var bank_branch = $("#bank_branch").val();
+			var account_number = $("#account_number").val();
+
+			var idr = toInt($("#idr").val());
+			var fee_transfer = toInt($("#fee_transfer").val());
+			var paid = toInt($("#paid_transfer").val());
+			var transfer_type = toInt($("#transfer_type").val());
+			var transfer_value = toInt($("#transfer_value").val());
+			var bank = $("#v_bank_id").val();
+			var kurs = toInt($("#kurs").val());
+			var branch_name = $("#v_branch_name").val();
+			var sequence = $("#sequence").val();
+
+			var source_of_funds = $("#source_of_funds").val();
+			var destination = $("#destination").val();
+
+			var member_birth = $("#member_birth").val();
+			var recepient_birth = $("#recepient_birth").val();
+
+			var item = {
+				branch_id: branch_id,
+				member_id: member_id,
+				member_name: member_name,
+				member_phone: member_phone,
+				whatsapp_no:whatsapp_no,
+				member_email: member_email,
+				member_address: member_address,
+				member_birth:member_birth,
+				recepient_id: recepient_id,
+				recepient_name: recepient_name,
+				recepient_address: recepient_address,
+				recepient_hp: recepient_hp,
+				recepient_birth:recepient_birth,
+				city: city,
+				relationalship: relationalship,
+				bank_id: bank_id,
+				bank_branch: bank_branch,
+				account_number: account_number,
+				idr: idr,
+				fee_transfer: fee_transfer,
+				paid: paid,
+				transfer_type: transfer_type,
+				transfer_value: transfer_value,
+				created_by: name,
+				kurs: kurs,
+				sequence:sequence,
+				source_of_funds:source_of_funds,
+				destination:destination
+			};
+
+			var form_data = new FormData();
+			for ( var key in item ) {
+				form_data.append(key, item[key]);
+			}
+
+			var over = $("#over").val();
+			
+
+			if("WARNING" == over){
+				
+
+				// var ktp = $("#ktp")[0].files[0];
+				// var contract = $("#contract")[0].files[0];
+
+				// form_data.append("ktp", ktp);
+				var imgBase64 = $("#attachment").val();
+
+				if( imgBase64 == "" || imgBase64 == null || imgBase64 == undefined ){
+					swal("error", "Contract or Address should not empty", "error");
+					$('.page-loader-wrapper').fadeOut();
+					return;
+				}
+	
+				var blob = DataURIToBlob(imgBase64);
+				form_data.append("contract",blob,"test.png");
+			}
+
+			
+			$.ajax({
+				method: "POST",
+				type: 'POST',
+				url: localhost + "/api/mobile/store",
+				cache: false,
+				contentType: false,
+				processData: false,
+				data: form_data,
+				success: function (response) {
+					if (response.status) {
+						$('.page-loader-wrapper').fadeOut();
+						var data = response.data;
+						print(response);
+						setTimeout(function(){
+							swal({
+									title: "Do you want to re-print?",
+									text: "Your transaction has been saved successfully",
+									type: "info",
+									showCancelButton: true,
+									confirmButtonClass: "btn-danger",
+									confirmButtonText: "Print",
+									cancelButtonText: "No, thanks",
+									closeOnConfirm: false,
+									closeOnCancel: false
+								},
+								function(isConfirm) {
+									if (isConfirm) {
+										print(response);
+										if(data.identity){
+											window.location.href = "transaction.html";
+										}else{
+											window.location.href = "identity.html?member_id="+data.member_id;
+										}
+										
+									} else {
+										if(data.identity){
+											window.location.href = "transaction.html";
+										}else{
+											window.location.href = "identity.html?member_id="+data.member_id;
+										}
+									}
+								});
+						},2000);
+					} else {
+						$('.page-loader-wrapper').fadeOut();
+						swal("Invalid",response.message,"error");
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					$('.page-loader-wrapper').fadeOut();
+					swal("error","Please reload page and check your connection...","error");
+				}
+			});
+		}
+
+		function print(response){
+			try {
+
+				var success = function () {};
+
+				var failure = function () {
+					swal("Info","Failed writing data to Bluetooth peripheral","info");
+				};
+
+				
+
+				var data = response.data;
+				var branch = response.branch;
+
+				if (data == null) {
+					swal("Error","Failed Print!","error");
+					return;
+				}
+
+				var invoice = data.device_input == 0 ? data.invoice_no :  data.invoice_tab;
+				var transaction_date = data.transaction_date;
+				
+				var bank_name = data.bank.bank_name;
+				
+				var branch_name = branch.branch_name;
+				var hotline = branch.hotline;
+				var title = branch.title;
+				var footer = branch.footer;
+				var show_hotline = branch.show_hotline === 1 ? "true" : "false";
+
+				var show_destination = branch.show_destination;
+				var show_source_of_funds = branch.show_source_of_funds;
+				var show_hkd_fee = branch.show_hkd_fee;
+				var show_total_hkd = branch.show_total_hkd;
+				var show_admin_idr = branch.show_admin_idr;
+
+				var total_hkd = (data.transfer_value + branch.fee);
+				var hkd_fee =  branch.fee;
+				var total_idr = data.transfer_value * data.kurs;
+				var admin_idr = 15000;
+				var total_tf =  total_idr - admin_idr;
+
+				bluetoothSerial.isEnabled(
+					function () {
+						if(title == null || title == ""){
+							bluetoothSerial.write("\n          NICE STAR", success, failure);
+						}else{
+							bluetoothSerial.write("\n          " + title, success, failure);
+						}
+
+						bluetoothSerial.write("\n", success, failure);
+						bluetoothSerial.write("\nInvoice No    :" + invoice, success, failure);
+						bluetoothSerial.write("\nInvoice Date  :" + today(), success, failure);
+						bluetoothSerial.write("\nShop Name     :" + branch_name, success, failure);
+						bluetoothSerial.write("\n---------------TRANSACTION DETAIL---------------", success, failure);
+						bluetoothSerial.write("\nReceiver Name       :" + data.recepient_name, success, failure);
+						bluetoothSerial.write("\nBank Name           :" + bank_name, success, failure);
+						bluetoothSerial.write("\nAccount             :" + data.account_number, success, failure);
+						bluetoothSerial.write("\nRelationship        :" + data.relationalship, success, failure);
+						bluetoothSerial.write("\nRecipient Address   :" + data.recepient_address, success, failure);
+						bluetoothSerial.write("\nCity                :" + data.city, success, failure);
+
+						if(show_destination){
+						bluetoothSerial.write("\nPurpose             :" + data.destination, success, failure);
+						}
+
+						if(show_source_of_funds){
+						bluetoothSerial.write("\nSource of Funds     :" + data.source_of_funds, success, failure);
+						}
+
+						bluetoothSerial.write("\nHK. ID/No.KTP       :" + data.member_id, success, failure);
+						bluetoothSerial.write("\nSender Name         :" + data.member_name, success, failure);
+						bluetoothSerial.write("\nPhone Number        :" + data.member_phone, success, failure);
+						bluetoothSerial.write("\nRate (IDR)          :" + toCurrency(data.kurs), success, failure);
+						bluetoothSerial.write("\nSent (HKD)          :" + toCurrency(data.transfer_value), success, failure);
+
+						if(show_hkd_fee){
+						bluetoothSerial.write("\nCharge (HKD)        :" + toCurrency(hkd_fee), success, failure);
+						}
+
+						if(show_total_hkd){
+						bluetoothSerial.write("\nTotal (HKD)         :" + toCurrency(total_hkd), success, failure);
+						}
+						
+						bluetoothSerial.write("\nTotal (IDR)         :" + toCurrency(total_idr), success, failure);
+
+						if(show_admin_idr){
+						bluetoothSerial.write("\nBank Admin Fee (IDR):" + toCurrency(admin_idr), success, failure);
+						}
+						
+						bluetoothSerial.write("\nTotal Transfer (IDR):" + toCurrency(total_tf), success, failure);
+						bluetoothSerial.write("\n             -- TERIMA KASIH--", success, failure);
+						if(hotline == null || hotline == ""){
+							if("true" == show_hotline){
+								bluetoothSerial.write("\n  Hotline WA: +62813-2530-7002 / 91439130", success, failure);
+							}else{
+								bluetoothSerial.write("\n  Hotline WA: +62813-2530-7002", success, failure);
+							}
+						}else{
+							bluetoothSerial.write("\n  " + hotline, success, failure);
+						}
+
+						if(footer == null && footer == ""){
+							bluetoothSerial.write("\nSilahkan periksa data anda sebelum meninggalkan toko", success, failure);
+							bluetoothSerial.write("\napabila terjadi kesalahan pengiriman SEM berhak", success, failure);
+							bluetoothSerial.write("\nmengambil keputusan terakhir.", success, failure);
+						}else{
+							bluetoothSerial.write("\n" + footer, success, failure);
+						}
+						
+						bluetoothSerial.write("\n\n\n", success, failure);
+					},
+					function () {
+						console.log("Bluetooth is *not* enabled");
+					}
+				);
+			} catch (error) {
+				swal(error);
+			}
+		}
+
+		$(".member").focusout(function(){
+			var typed = this.value;
+			var type = $("input[name='group1']:checked").val();
+			if(type == 1){
+				if(typed.substr(typed.length - 1) != ")"){
+					var latest = "("+typed.substr(typed.length - 1)+")";
+					$(this).val(typed.substr(0, typed.length - 1) + latest) ;
+				}        
+			}
+			
+			var tmp = $(this).val();
+			$(this).val(tmp.replace("()",""));
+		});
+		
+		
+		 function cc_format(value) {
+			var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+			
+			var matches = v.match(/\d{4,16}/g);
+			var match = matches && matches[0] || '';
+
+			var parts = [];
+
+			for (i=0, len=match.length; i<len; i+=4) {
+				parts.push(match.substring(i, i+4))
+			}
+			if (parts.length) {
+				return parts.join(' ')
+			} else {
+				return value
+			}
+		}
+
+		onload = function() {
+			document.getElementById('account_number').oninput = function() {
+				this.value = cc_format(this.value)
+			}
+		}
+		
+		$("input[name='group1']").change(function(){
+			$("#member_id").val("");
+		});
+
+		function logout() {
+			storage.clear();
+			window.location.href = "login.html";
+		}
+
+		$('#member_id').autocomplete({
+			serviceUrl: localhost + "/api/mobile/member/searchMembers/all",
+			minChars:3,
+			autoSelectFirst:true,
+			onSelect: function (suggestion) {
+				$("#member_name").val("");
+				$("#member_phone").val("");
+				$("#member_email").val("");
+				$("#member_address").val("");
+				$("#member_birth").val("");
+				$("#whatsapp_no").val("");
+
+				$("#recepient_id").val("");
+				$("#recepient_name").val("");
+				$("#recepient_address").val("");
+				$("#recepient_hp").val("");
+				$("#recepient_birth").val("");
+				$("#city").val("");
+				$("#relationalship").val("");
+				$("#account_no").val("");
+				$("#bank_id").val("");
+				$("#bank_branch").val("");
+				$("#account_number").val("");
+				$("#remark").val("");
+
+				var member_id = $(this).val();
+				$("#label_id").html(member_id);
+				
+				if(member_id == null || member_id == ""){
+					swal("Member ID should not empty..");
+					return;
+				}
+			
+				$("#choose_recepient").empty();
+				
+				$.ajax({
+					method: "GET",
+					url: localhost + "/api/mobile/getRecepient",
+					data: {
+						id: member_id
+					},
+					dataType: "json",
+					success: function (response) {
+						if (response.status) {
+							var data = response.data;
+							$("#choose_recepient").empty();
+							if (data != null && data.length > 0) {
+								$("#choose_recepient").append("<option value=''>No Selected</option>");
+								for (var i = 0; i < data.length; i++) {
+									$("#choose_recepient").append("<option value='" + data[i].id + "'>" + data[i].account_number +" - "+data[i].recepient_name + " - " + data[i].bank_name+ "</option>");
+								}
+							}else{
+								swal("No Recipient History");
+							}
+						}
+					},
+					error: function (xhr, status, errorThrown) {
+						swal("error","Member data not retrieved, connection timeout","error");
+					}
+				});
+
+				$.ajax({
+					method: "GET",
+					url: localhost + "/api/mobile/member",
+					data: {
+						member_id: member_id
+					},
+					dataType: "json",
+					success: function (response) {
+						if (response.status) {
+							var data = response.data;
+							var member = response.member;
+							if (member != null) {
+								if(!member.whatsapp_no){
+									swal("info","Whatsapp no has not been filled in, use the country code at the beginning of the number","info");
+								}
+
+								$("#member_id").val(member.hongkong_id);
+								$("#member_name").val(member.member_name);
+								$("#member_phone").val(member.phone_hk);
+								$("#whatsapp_no").val(member.whatsapp_no);
+								$("#member_email").val(member.email_hk);
+								$("#member_address").val(member.hongkong_address);
+								$("#member_birth").val(member.member_birth);
+								$("#remark").val(member.remark);
+
+								$("#branch_id").prop("disabled", true);
+								$("#member_id").prop("disabled", true);
+								$("#member_name").prop("disabled", true);
+
+								$("#v_member_id").val(member.hongkong_id);
+								$("#v_member_name").val(member.member_name);
+								$("#v_member_phone").val(member.phone_hk);
+								$("#v_member_address").val(member.hongkong_address);
+
+								setting(member.branch_id);
+							}
+
+							if(response.valid){
+								swal('NEED CONTRACT OR ADDRESS','Warning','warning');
+								$("#over").val("WARNING");
+								$("#upload-attachment").show();
+							}
+
+							$("#current_transaction").val(response.current);
+
+							swal("info","Member total transaction this month is HKD " + response.current,"info");
+
+						} else {
+
+							$("#member_id").prop("disabled", false);
+							$("#member_name").prop("disabled", false);
+							$("#member_address").prop("disabled", false);
+						}
+					},
+					error: function (xhr, status, errorThrown) {
+						swal("Please reload page and check your connection...");
+					}
+				});
+			}
+		});
+
+		$("#contract").click(function(){
+            navigator.camera.getPicture(onSuccess, onFail, { 
+                quality: 20, 
+                destinationType : Camera.DestinationType.DATA_URL
+            });
+		});
+		
+		// Change image source
+		function onSuccess(imageURI) {
+			//   var image = document.getElementById('img');
+			//   image.src = "data:image/png;base64,"+imageData;
+			//   $("#attachment").val("data:image/png;base64,"+imageData);
+			$("#img").attr('src','data:image/png;base64,'+imageURI);
+			$("#attachment").val('data:image/png;base64,'+imageURI);
+		}
+
+		function onFail(message) {
+			alert('Failed because: ' + message);
+		}
+
+		function dowjones(nama, birth) {
+			$.ajax({
+				method: "GET",
+				url: localhost +  "/api/mobile/dowjones?name="+nama,
+				data: {
+			
+				},
+				dataType: "json",
+				success: function (response) {
+					if (response.status) {
+						swal({
+							title: "WARNING!!",
+							text: "This recipient in alert dowjones, wants to continue ?",
+							type: "info",
+							showCancelButton: true,
+							confirmButtonClass: "btn-danger",
+							confirmButtonText: "Continue",
+							cancelButtonText: "Invalid",
+							closeOnConfirm: true,
+							closeOnCancel: true
+						},
+						function(isConfirm) {
+							if (!isConfirm) {
+								window.location.href = "transaction.html";
+							}
+						});
+					}
+				},
+				error: function (xhr, status, errorThrown) {
+					swal("error","Connection timeout","error");
+				}
+			});
+		}
+
+		function DataURIToBlob(dataURI) {
+			const splitDataURI = dataURI.split(',')
+			const byteString = splitDataURI[0].indexOf('base64') >= 0 ? atob(splitDataURI[1]) : decodeURI(splitDataURI[1])
+			const mimeString = splitDataURI[0].split(':')[1].split(';')[0]
+
+			const ia = new Uint8Array(byteString.length)
+			for (let i = 0; i < byteString.length; i++)
+				ia[i] = byteString.charCodeAt(i)
+
+			return new Blob([ia], { type: mimeString })
+      }
+
+		$(document).ajaxStart(function(){
+			$('.page-loader-wrapper').fadeIn('slow');
+		}).ajaxStop(function(){
+			$('.page-loader-wrapper').fadeOut('slow');
+		});
+
+
+	</script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
