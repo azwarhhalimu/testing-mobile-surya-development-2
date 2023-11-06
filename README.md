@@ -11,7 +11,5 @@ banyak plugin yang sdh tdk sesuai dengan kompitibitas hp android saat ini.
 deskripsi 
 
 versi cordova : 12
-
 gralde : 8
-
 android target :33
