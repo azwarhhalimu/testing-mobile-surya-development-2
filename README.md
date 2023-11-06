@@ -1,15 +1,21 @@
-# testing-mobile-surya-development-2
+
+# Aplikasi Test Ujian
+
+Perintah untuk relase
+
+## Maaf sy modifi sedikit soalnya sdh tdk sesuai dengan penggunaan android saat ini
+
+- versi cordova terbaru : 12. sedangkan file yang di kirim versi nya masih 6.
+- versi gradle saat ini : 8. versi gradle yang dikirim 6
+- build tool : 33. versi build tool yang di kirim 27
 
 
-perintah untuk relase
 
-cordova build android --release -- --keystore="keyrelease" --storePassword=buluayam --alias=key --packageType=apk
+## Perintah
 
-banyak plugin yang sdh tdk sesuai dengan kompitibitas hp android saat ini.
+cara membuatrelase apk
 
------------------------------------
-deskripsi 
+```bash
+  cordova build android --release -- --keystore="keyrelease" --storePassword=buluayam --alias=key --packageType=apk
+```
 
-versi cordova : 12
-gralde : 8
-android target :33
