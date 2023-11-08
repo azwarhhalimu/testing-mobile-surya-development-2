@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-textdirection="ltr" class="loading">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <title>SURYA EXPRESS MANTAP</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Material Datetime Picker Css -->
@@ -36,22 +40,22 @@
 
     <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
-	
-	<script type="text/javascript">
-      var localhost = "https://old-fast.klikrumahaja.com";
-	  var storage = window.localStorage;
-	  var profile_name = storage.getItem("name");
-	  var profile_email = storage.getItem("email");
-	  
-	  if(profile_name == null || profile_name == ""){
-		storage.clear();
-		window.location.href ="login.html";
-	  }
+
+    <script type="text/javascript">
+        var localhost = "klikrumahaja.com";
+        var storage = window.localStorage;
+        var profile_name = storage.getItem("name");
+        var profile_email = storage.getItem("email");
+
+        if (profile_name == null || profile_name == "") {
+            storage.clear();
+            window.location.href = "login.html";
+        }
     </script>
-    
+
     <style>
-        .bg-error{
-            background-color:#FFFFD4 !important;
+        .bg-error {
+            background-color: #FFFFD4 !important;
         }
     </style>
 </head>
@@ -96,10 +100,12 @@
                     <img src="images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="profile_name"></div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        id="profile_name"></div>
                     <div class="email" id="profile_email"></div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="change.html"><i class="material-icons">vpn_key</i>Change text</a></li>
                             <li><a href="javascript:logout();"><i class="material-icons">input</i>Sign Out</a></li>
@@ -113,11 +119,11 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li id="setting_kurs" style="display:none">
-						<a href="#">
-							<i class="material-icons">language</i>
-							<span>KURS: <label id="current_kurs">0</label></span>
-						</a>
-					</li>
+                        <a href="#">
+                            <i class="material-icons">language</i>
+                            <span>KURS: <label id="current_kurs">0</label></span>
+                        </a>
+                    </li>
                     <li>
                         <a href="layout.html">
                             <i class="material-icons">home</i>
@@ -150,7 +156,7 @@
                             <span>NEW MEMBER</span>
                         </a>
                     </li>
-					
+
                     <li>
                         <a href="invoice.html">
                             <i class="material-icons">assessment</i>
@@ -172,15 +178,15 @@
                             <span>BENEFICIARY</span>
                         </a>
                     </li>
-					
+
                     <li>
                         <a href="print.html">
                             <i class="material-icons">print</i>
                             <span>RE-PRINT</span>
                         </a>
                     </li>
-					
-					<li>
+
+                    <li>
                         <a href="setting.html">
                             <i class="material-icons">settings</i>
                             <span>SETTING</span>
@@ -195,14 +201,14 @@
                     &copy; 2021 <a href="javascript:void(0);">SURYA EXPRESS MANTAP</a>.
                 </div>
                 <div class="version">
-                   <b>Version: </b> 2.0.17
+                    <b>Version: </b> 2.0.17
 
                 </div>
             </div>
             <!-- #Footer -->
         </aside>
         <!-- #END# Left Sidebar -->
-        
+
     </section>
 
     <section class="content">
@@ -210,7 +216,7 @@
             <!-- Input -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div >
+                    <div>
                         <div class="header">
                             <h2>
                                 REGISTER<br>
@@ -228,7 +234,8 @@
                                             <div>
                                                 <label for="projectinput1">IDENTITY TYPE (HK ID / PASSPORT) </label>
                                                 <div class="demo-radio-button">
-                                                    <input name="group1" type="radio" id="member_type_1" value="1" checked />
+                                                    <input name="group1" type="radio" id="member_type_1" value="1"
+                                                        checked />
                                                     <label for="member_type_1">HK ID</label>
                                                     <input name="group1" type="radio" id="member_type_2" value="2" />
                                                     <label for="member_type_2">PASSPORT</label>
@@ -243,11 +250,13 @@
                                                 <i class="material-icons">public</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control" id="hongkong_id" name="hongkong_id" class="form-control" placeholder="HONGKONG ID" required>
+                                                <input type="text" class="form-control" id="hongkong_id"
+                                                    name="hongkong_id" class="form-control" placeholder="HONGKONG ID"
+                                                    required>
                                             </div>
                                         </div>
                                     </div>
-        
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>MEMBER NAME</b>
                                         <div class="input-group">
@@ -255,7 +264,9 @@
                                                 <i class="material-icons">person</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control" id="member_name" name="member_name" class="form-control" placeholder="MEMBER NAME" required>
+                                                <input type="text" class="form-control" id="member_name"
+                                                    name="member_name" class="form-control" placeholder="MEMBER NAME"
+                                                    required>
                                             </div>
                                         </div>
                                     </div>
@@ -266,11 +277,12 @@
                                                 <i class="material-icons">phone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="number" class="form-control" id="phone_hk" name="phone_hk" class="form-control" placeholder="PHONE HK" required>
+                                                <input type="number" class="form-control" id="phone_hk" name="phone_hk"
+                                                    class="form-control" placeholder="PHONE HK" required>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>HONGKONG ADDRESS</b>
                                         <div class="input-group">
@@ -278,7 +290,9 @@
                                                 <i class="material-icons">nature_people</i>
                                             </span>
                                             <div class="form-line">
-                                                <textarea class="form-control" id="hongkong_address" name="hongkong_address" class="form-control" placeholder="HONGKONG ADDRESS" required></textarea>
+                                                <textarea class="form-control" id="hongkong_address"
+                                                    name="hongkong_address" class="form-control"
+                                                    placeholder="HONGKONG ADDRESS" required></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -290,16 +304,18 @@
                                                 <i class="material-icons">email</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="email" class="form-control" id="email_hk" name="email_hk" class="form-control" placeholder="EMAIL HK">
+                                                <input type="email" class="form-control" id="email_hk" name="email_hk"
+                                                    class="form-control" placeholder="EMAIL HK">
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-xs-12 col-md-12">
-                                        <h4>RECEPIENT</h4><hr>
+                                        <h4>RECEPIENT</h4>
+                                        <hr>
                                         <input type="hidden" id="id_recepient" name="id_recepient">
                                     </div>
-        
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>RECEPIENT NAME</b>
                                         <div class="input-group">
@@ -307,7 +323,9 @@
                                                 <i class="material-icons">person</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control" id="recepient_name" name="recepient_name" class="form-control" placeholder="RECEPIENT NAME" required>
+                                                <input type="text" class="form-control" id="recepient_name"
+                                                    name="recepient_name" class="form-control"
+                                                    placeholder="RECEPIENT NAME" required>
                                             </div>
                                         </div>
                                     </div>
@@ -318,11 +336,13 @@
                                                 <i class="material-icons">pin_drop</i>
                                             </span>
                                             <div class="form-line">
-                                                <textarea class="form-control" id="recepient_address" name="recepient_address" class="form-control" placeholder="RECEPIENT ADDRESS" required></textarea>
+                                                <textarea class="form-control" id="recepient_address"
+                                                    name="recepient_address" class="form-control"
+                                                    placeholder="RECEPIENT ADDRESS" required></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>PHONE</b>
                                         <div class="input-group">
@@ -330,7 +350,9 @@
                                                 <i class="material-icons">phone</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="number" class="form-control" id="recepient_hp" name="recepient_hp" class="form-control" placeholder="PHONE" required>
+                                                <input type="number" class="form-control" id="recepient_hp"
+                                                    name="recepient_hp" class="form-control" placeholder="PHONE"
+                                                    required>
                                             </div>
                                         </div>
                                     </div>
@@ -342,63 +364,72 @@
                                                 <i class="material-icons">people_outline</i>
                                             </span>
                                             <div class="form-line">
-                                                <input type="text" class="form-control" id="relationalship" name="relationalship" class="form-control" placeholder="RELATIONALSHIP" required>
+                                                <input type="text" class="form-control" id="relationalship"
+                                                    name="relationalship" class="form-control"
+                                                    placeholder="RELATIONALSHIP" required>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-md-12">
-                                            <b>CITY / DISTRICT</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">location_city</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control" id="city" name="city" class="form-control" placeholder="CITY / DISTRICT" required>
-                                                </div>
+                                        <b>CITY / DISTRICT</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="city" name="city"
+                                                    class="form-control" placeholder="CITY / DISTRICT" required>
                                             </div>
                                         </div>
-            
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>BANK</b><br>
-                                            <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">location_city</i>
-                                                    </span>
-                                                    <div class="form-line">
-                                                        <select class="form-control" id="bank_id" name="bank_id" style="width: 100%"></select>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>BANK BRANCH</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">location_city</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <input type="text" class="form-control" id="bank_branch" name="bank_branch" class="form-control" placeholder="BANK BRANCH" required>
-                                                </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>BANK</b><br>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <select class="form-control" id="bank_id" name="bank_id"
+                                                    style="width: 100%"></select>
                                             </div>
                                         </div>
-     
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>ACCOUNT NUMBER</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">credit_card</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <input type="tel" pattern="\d*" class="form-control" id="account_number" name="account_number" class="form-control" placeholder="ACCOUNT NUMBER" required>
-                                                </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>BANK BRANCH</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" id="bank_branch"
+                                                    name="bank_branch" class="form-control" placeholder="BANK BRANCH"
+                                                    required>
                                             </div>
                                         </div>
-                                
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>ACCOUNT NUMBER</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">credit_card</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <input type="tel" pattern="\d*" class="form-control" id="account_number"
+                                                    name="account_number" class="form-control"
+                                                    placeholder="ACCOUNT NUMBER" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-xs-12 col-md-12 text-right" style="padding:10px">
                                         <a href="register.html" class="btn  waves-effect">
                                             <i class="material-icons">arrow_back</i> CANCEL
                                         </a>
-                                        <button type="submit" class="btn btn btn-primary" id="btnSubmit" name="btnSubmit">
+                                        <button type="submit" class="btn btn btn-primary" id="btnSubmit"
+                                            name="btnSubmit">
                                             <i class="material-icons">cloud_upload</i> SAVE
                                         </button>
                                     </div>
@@ -407,7 +438,7 @@
                         </div>
                     </div>
                 </div>
-				
+
             </div>
             <!-- #END# Input -->
         </div>
@@ -434,14 +465,14 @@
     <!-- Sweetswal Plugin Js -->
     <script src="plugins/sweetalert/sweetalert.min.js"></script>
 
-     <!-- Moment Plugin Js -->
-     <script src="plugins/momentjs/moment.js"></script>
-    
+    <!-- Moment Plugin Js -->
+    <script src="plugins/momentjs/moment.js"></script>
+
     <script src="plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
     <!-- Validation Plugin Js -->
     <script src="plugins/jquery-validation/jquery.validate.js"></script>
-    
+
     <script src="plugins/jquery-datatable/jquery.dataTables.js"></script>
     <script src="plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
@@ -460,11 +491,11 @@
 
     <!-- Demo Js -->
     <script src="js/demo.js"></script>
-	<script>
-		$(document).ready(function(){
+    <script>
+        $(document).ready(function () {
             bank();
-			$("#profile_name").html(profile_name);
-			$("#profile_email").html(profile_email);
+            $("#profile_name").html(profile_name);
+            $("#profile_email").html(profile_email);
 
             $('.js-basic-example').DataTable({
                 responsive: true,
@@ -474,13 +505,13 @@
             var url = new URL(window.location.href);
             var id = url.searchParams.get("member_id");
 
-            if(id){
+            if (id) {
                 member(id);
-            }else{
+            } else {
                 $("#stFormAction").val("ADD");
             }
-		});
-	</script>
+        });
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
             app.initialize();
@@ -500,44 +531,43 @@
             });
 
             $('#sign_in').valid();
-                
+
         });
 
         function cc_format(value) {
-			var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
-			var matches = v.match(/\d{4,16}/g);
-			var match = matches && matches[0] || ''
-			var parts = []
-			for (i=0, len=match.length; i<len; i+=4) {
-				parts.push(match.substring(i, i+4))
-			}
-			if (parts.length) {
-				return parts.join(' ')
-			} else {
-				return value
-			}
-		}
+            var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+            var matches = v.match(/\d{4,16}/g);
+            var match = matches && matches[0] || ''
+            var parts = []
+            for (i = 0, len = match.length; i < len; i += 4) {
+                parts.push(match.substring(i, i + 4))
+            }
+            if (parts.length) {
+                return parts.join(' ')
+            } else {
+                return value
+            }
+        }
 
-		onload = function() {
-			document.getElementById('account_number').oninput = function() {
-				this.value = cc_format(this.value)
-			}
-		}
+        onload = function () {
+            document.getElementById('account_number').oninput = function () {
+                this.value = cc_format(this.value)
+            }
+        }
 
-        function bank()
-        {
+        function bank() {
             $.ajax({
                 method: "GET",
                 url: "http://167.99.75.238/api/mobile/getBank",
                 dataType: "json",
                 success: function (response) {
-                    if(response.status){
+                    if (response.status) {
                         var data = response.data;
-                        if(data && data.length > 0){
+                        if (data && data.length > 0) {
                             $("#bank_id").empty();
                             $("#bank_id").append("<option value=''>NO SELECT</option>");
                             for (let i = 0; i < data.length; i++) {
-                                $("#bank_id").append("<option value='"+data[i].id+"'>"+data[i].bank_name+"</option>");
+                                $("#bank_id").append("<option value='" + data[i].id + "'>" + data[i].bank_name + "</option>");
                             }
                         }
                     }
@@ -548,19 +578,18 @@
             });
         }
 
-        function member(id)
-        {
+        function member(id) {
             $.ajax({
                 method: "GET",
                 url: "http://167.99.75.238/api/mobile/member",
-                data : {member_id:id},
+                data: { member_id: id },
                 dataType: "json",
                 success: function (response) {
-                    if(response.status){
+                    if (response.status) {
                         var member = response.member;
                         var recepient = response.recepient;
 
-                        if(member){
+                        if (member) {
                             $("#stFormAction").val("EDIT");
                             $("#id").val(member.id);
                             $("#hongkong_id").val(member.hongkong_id);
@@ -588,43 +617,43 @@
             });
         }
 
-        $("#hongkong_id").focusout(function(){
-			var typed = this.value;
-			var type = $("input[name='group1']:checked").val();
-			if(type == 1){
-				if(typed.substr(typed.length - 1) != ")"){
-					var latest = "("+typed.substr(typed.length - 1)+")";
-					$(this).val(typed.substr(0, typed.length - 1) + latest) ;
-				}        
-			}
-			
-			var tmp = $(this).val();
-			$(this).val(tmp.replace("()",""));
-		});
+        $("#hongkong_id").focusout(function () {
+            var typed = this.value;
+            var type = $("input[name='group1']:checked").val();
+            if (type == 1) {
+                if (typed.substr(typed.length - 1) != ")") {
+                    var latest = "(" + typed.substr(typed.length - 1) + ")";
+                    $(this).val(typed.substr(0, typed.length - 1) + latest);
+                }
+            }
 
-        $("input[name='group1']").change(function(){
-			$("#hongkong_id").val("");
-		});
+            var tmp = $(this).val();
+            $(this).val(tmp.replace("()", ""));
+        });
 
-        $("#btnSubmit").click(function(){
-            var data  = $('#sign_in').serialize();
-            
-            if(!$('#sign_in').valid()){
+        $("input[name='group1']").change(function () {
+            $("#hongkong_id").val("");
+        });
+
+        $("#btnSubmit").click(function () {
+            var data = $('#sign_in').serialize();
+
+            if (!$('#sign_in').valid()) {
                 return;
             }
 
             $.ajax({
                 method: "POST",
                 url: "http://167.99.75.238/api/mobile/member",
-                data: data,	
+                data: data,
                 dataType: "json",
                 success: function (response) {
-                    if(response.status){
+                    if (response.status) {
                         swal(response.message);
-                        setTimeout(function(){
-                            window.location.href ="register.html";
-                        },2000);
-                    }else{
+                        setTimeout(function () {
+                            window.location.href = "register.html";
+                        }, 2000);
+                    } else {
                         swal("Failed save data");
                     }
                 },
@@ -633,10 +662,10 @@
                 }
             });
         });
-        
+
         var app = {
             // Application Constructor
-            initialize: function() {
+            initialize: function () {
                 document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
             },
 
@@ -644,24 +673,24 @@
             //
             // Bind any cordova events here. Common events are:
             // 'pause', 'resume', etc.
-            onDeviceReady: function() {
+            onDeviceReady: function () {
                 document.addEventListener("backbutton", onBackKeyDown, false);
             },
 
             // Update DOM on a Received Event
-            receivedEvent: function(id) {
-            
+            receivedEvent: function (id) {
+
             }
         };
-        
+
         function onBackKeyDown() {
             navigator.app.exitApp();
         }
-        
-	  function logout(){
-			storage.clear();
-			window.location.href ="login.html";
-	  }
+
+        function logout() {
+            storage.clear();
+            window.location.href = "login.html";
+        }
     </script>
     <script src="js/custom.js"></script>
 </body>

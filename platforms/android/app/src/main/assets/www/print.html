@@ -34,10 +34,10 @@
 	<link href="css/themes/all-themes.css" rel="stylesheet" />
 
 	<!-- Sweetswal Css -->
-    <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+	<link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 
 	<script type="text/javascript">
-		var localhost = "https://old-fast.klikrumahaja.com";
+		var localhost = "klikrumahaja.com";
 		var storage = window.localStorage;
 		var profile_name = storage.getItem("name");
 		var profile_email = storage.getItem("email");
@@ -138,11 +138,11 @@
 					</li>
 
 					<li>
-                        <a href="identity.html">
-                            <i class="material-icons">camera_alt</i>
-                            <span>CAPTURE</span>
-                        </a>
-                    </li>
+						<a href="identity.html">
+							<i class="material-icons">camera_alt</i>
+							<span>CAPTURE</span>
+						</a>
+					</li>
 
 					<li>
 						<a href="register.html">
@@ -151,7 +151,7 @@
 						</a>
 					</li>
 
-					
+
 
 					<li>
 						<a href="invoice.html">
@@ -161,11 +161,11 @@
 					</li>
 
 					<li>
-                        <a href="detail_transaction.html">
-                            <i class="material-icons">analytics</i>
-                            <span>DETAIL TRANSACTION</span>
-                        </a>
-                    </li>
+						<a href="detail_transaction.html">
+							<i class="material-icons">analytics</i>
+							<span>DETAIL TRANSACTION</span>
+						</a>
+					</li>
 
 					<li>
 						<a href="beneficiary.html">
@@ -211,7 +211,7 @@
 			<!-- Input -->
 			<div class="row clearfix">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div >
+					<div>
 						<div class="header">
 							<h2>
 								RE-PRINT<br>
@@ -258,7 +258,7 @@
 					</div>
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div >
+					<div>
 						<div class="body">
 							<div class="card-block">
 								<h4 class="card-title">INVOICE: <label id="label_id"></label></h4>
@@ -386,7 +386,7 @@
 														Terima kasih telah menggunakan NICE STAR
 														Wa :+62813-2530-7002
 														silahkan periksa data anda sebelum meninggalkan toko,
-														apabila terjadi kesalahan pengiriman SEM berhak mengambil 
+														apabila terjadi kesalahan pengiriman SEM berhak mengambil
 														keputusan terakhir.
 													</p>
 													<br>
@@ -450,8 +450,8 @@
 				bluetoothSerial.isEnabled(
 					function () {
 						console.log("Bluetooth is enabled");
-						bluetoothSerial.clear(function(){}, function(){});
-						bluetoothSerial.disconnect(function(){}, function(){});
+						bluetoothSerial.clear(function () { }, function () { });
+						bluetoothSerial.disconnect(function () { }, function () { });
 						bluetoothSerial.connect(macAddress, app.onConnect, app.onDisconnect);
 					},
 					function () {
@@ -469,12 +469,12 @@
 			},
 		};
 
-		function setting_hotline(){
+		function setting_hotline() {
 			$.ajax({
 				method: "GET",
 				url: localhost + "/api/mobile/setting_hotline",
 				data: {
-					branch_id:storage.getItem("branch_id"),
+					branch_id: storage.getItem("branch_id"),
 				},
 				dataType: "json",
 				success: function (response) {
@@ -543,7 +543,7 @@
 				return;
 			}
 
-	
+
 			$.ajax({
 				method: "GET",
 				url: localhost + "/api/mobile/invoice",
@@ -558,20 +558,20 @@
 						var bank_name = response.bank_name;
 						var branch_name = response.branch_name;
 						var branch = data.branch_data;
-						
+
 						var hotline = branch.hotline;
 						var title = branch.title;
 
 						if (data != null) {
 							var device = data.device_input;
 							var invoice_no = "";
-							
-							if(device == 0){
+
+							if (device == 0) {
 								invoice_no = data.invoice_no;
-							}else{
+							} else {
 								invoice_no = data.invoice_tab;
 							}
-							
+
 							$("#invoice_no").val(invoice_no);
 							$("#invoice_date").val(data.transaction_date);
 							$("#shop").val(branch_name);
@@ -649,11 +649,11 @@
 				success: function (response) {
 					if (response.status) {
 						var data = response.data;
-						
+
 						if (data != null) {
-							var invoice = data.device_input == 0 ? data.invoice_no :  data.invoice_tab;
+							var invoice = data.device_input == 0 ? data.invoice_no : data.invoice_tab;
 							var transaction_date = data.transaction_date;
-							
+
 							var bank_name = response.bank_name;
 							var branch_name = response.branch_name;
 
@@ -665,10 +665,10 @@
 
 
 							var total_hkd = (data.transfer_value + branch.fee);
-							var hkd_fee =  branch.fee;
+							var hkd_fee = branch.fee;
 							var total_idr = data.transfer_value * data.kurs;
 							var admin_idr = 15000;
-							var total_tf =  total_idr - admin_idr;
+							var total_tf = total_idr - admin_idr;
 
 							var success = function () {
 
@@ -678,15 +678,15 @@
 								swal("Failed writing data to Bluetooth peripheral");
 							};
 
-						
+
 							bluetoothSerial.isEnabled(
 								function () {
-									if(title == null || title == ""){
+									if (title == null || title == "") {
 										bluetoothSerial.write("\n          SURYA EXPRESS MANTAP", success, failure);
-									}else{
+									} else {
 										bluetoothSerial.write("\n          " + title, success, failure);
 									}
-									
+
 									bluetoothSerial.write("\n", success, failure);
 									bluetoothSerial.write("\nInvoice No    :" + invoice, success, failure);
 									bluetoothSerial.write("\nInvoice Date  :" + transaction_date, success, failure);
@@ -712,25 +712,25 @@
 									bluetoothSerial.write("\nTotal Transfer (IDR) :" + toCurrency(total_tf), success, failure);
 									bluetoothSerial.write("\n             -- TERIMA KASIH--", success, failure);
 
-									if(hotline == null || hotline == ""){
-										if("true" == show_hotline){
+									if (hotline == null || hotline == "") {
+										if ("true" == show_hotline) {
 											bluetoothSerial.write("\n  Hotline WA: +62813-2530-7002 / 91439130", success, failure);
-										}else{
+										} else {
 											bluetoothSerial.write("\n  Hotline WA: +62813-2530-7002", success, failure);
 										}
-									}else{
+									} else {
 										bluetoothSerial.write("\n  " + hotline, success, failure);
 									}
-									
-									
-									if(footer == null && footer == ""){
+
+
+									if (footer == null && footer == "") {
 										bluetoothSerial.write("\nSilahkan periksa data anda sebelum meninggalkan toko", success, failure);
 										bluetoothSerial.write("\napabila terjadi kesalahan pengiriman SEM berhak", success, failure);
 										bluetoothSerial.write("\nmengambil keputusan terakhir.", success, failure);
-									}else{
+									} else {
 										bluetoothSerial.write("\n" + footer, success, failure);
 									}
-									
+
 									bluetoothSerial.write("\n\n\n", success, failure);
 								},
 								function () {

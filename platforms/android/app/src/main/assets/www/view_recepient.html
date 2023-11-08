@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-textdirection="ltr" class="loading">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <title>SURYA EXPRESS MANTAP</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Material Datetime Picker Css -->
@@ -36,18 +40,18 @@
 
     <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
-	
-	<script type="text/javascript">
-      var localhost = "https://old-fast.klikrumahaja.com";
-	  var storage = window.localStorage;
-	  var profile_name = storage.getItem("name");
-	  var profile_email = storage.getItem("email");
-	  
-	  if(profile_name == null || profile_name == ""){
-		storage.clear();
-		window.location.href ="login.html";
-	  }
-	</script>
+
+    <script type="text/javascript">
+        var localhost = "klikrumahaja.com";
+        var storage = window.localStorage;
+        var profile_name = storage.getItem("name");
+        var profile_email = storage.getItem("email");
+
+        if (profile_name == null || profile_name == "") {
+            storage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body class="theme-red">
@@ -90,10 +94,12 @@
                     <img src="images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="profile_name"></div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        id="profile_name"></div>
                     <div class="email" id="profile_email"></div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="change.html"><i class="material-icons">vpn_key</i>Change text</a></li>
                             <li><a href="javascript:logout();"><i class="material-icons">input</i>Sign Out</a></li>
@@ -107,11 +113,11 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li id="setting_kurs" style="display:none">
-						<a href="#">
-							<i class="material-icons">language</i>
-							<span>KURS: <label id="current_kurs">0</label></span>
-						</a>
-					</li>
+                        <a href="#">
+                            <i class="material-icons">language</i>
+                            <span>KURS: <label id="current_kurs">0</label></span>
+                        </a>
+                    </li>
                     <li>
                         <a href="layout.html">
                             <i class="material-icons">home</i>
@@ -144,7 +150,7 @@
                             <span>NEW MEMBER</span>
                         </a>
                     </li>
-					
+
                     <li>
                         <a href="invoice.html">
                             <i class="material-icons">assessment</i>
@@ -165,15 +171,15 @@
                             <span>BENEFICIARY</span>
                         </a>
                     </li>
-					
+
                     <li>
                         <a href="print.html">
                             <i class="material-icons">print</i>
                             <span>RE-PRINT</span>
                         </a>
                     </li>
-					
-					<li>
+
+                    <li>
                         <a href="setting.html">
                             <i class="material-icons">settings</i>
                             <span>SETTING</span>
@@ -188,14 +194,14 @@
                     &copy; 2021 <a href="javascript:void(0);">SURYA EXPRESS MANTAP</a>.
                 </div>
                 <div class="version">
-                   <b>Version: </b> 2.0.17
+                    <b>Version: </b> 2.0.17
 
                 </div>
             </div>
             <!-- #Footer -->
         </aside>
         <!-- #END# Left Sidebar -->
-        
+
     </section>
 
     <section class="content">
@@ -203,7 +209,7 @@
             <!-- Input -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div >
+                    <div>
                         <div class="header">
                             <h2>
                                 RECEPIENT
@@ -223,11 +229,11 @@
                                                 <i class="material-icons">public</i>
                                             </span>
                                             <div class="form-line">
-                                                <label  id="recepient_id" name="recepient_id"></label>
+                                                <label id="recepient_id" name="recepient_id"></label>
                                             </div>
                                         </div>
                                     </div>
-        
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>RECEPIENT NAME</b>
                                         <div class="input-group">
@@ -246,11 +252,11 @@
                                                 <i class="material-icons">pin_drop</i>
                                             </span>
                                             <div class="form-line">
-                                                <label id="recepient_address" name="recepient_address" ></label>
+                                                <label id="recepient_address" name="recepient_address"></label>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-xs-12 col-md-12">
                                         <b>PHONE</b>
                                         <div class="input-group">
@@ -270,58 +276,59 @@
                                                 <i class="material-icons">people_outline</i>
                                             </span>
                                             <div class="form-line">
-                                                <label id="relationalship" name="relationalship" ></label>
+                                                <label id="relationalship" name="relationalship"></label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-xs-12 col-md-12">
-                                            <b>CITY / DISTRICT</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">location_city</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <label  id="city" name="city"></label>
-                                                </div>
+                                        <b>CITY / DISTRICT</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <label id="city" name="city"></label>
                                             </div>
                                         </div>
-            
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>BANK</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">location_city</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <select class="form-control" id="bank_id" name="bank_id" style="width: 100%" disabled></select>
-                                                </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>BANK</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <select class="form-control" id="bank_id" name="bank_id"
+                                                    style="width: 100%" disabled></select>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>BANK BRANCH</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">location_city</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <label id="bank_branch" name="bank_branch"></label>
-                                                </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>BANK BRANCH</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">location_city</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <label id="bank_branch" name="bank_branch"></label>
                                             </div>
                                         </div>
-     
-                                        <div class="col-xs-12 col-md-12">
-                                            <b>ACCOUNT NUMBER</b>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="material-icons">credit_card</i>
-                                                </span>
-                                                <div class="form-line">
-                                                    <label id="account_number" name="account_number" ></label>
-                                                </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-md-12">
+                                        <b>ACCOUNT NUMBER</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">credit_card</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <label id="account_number" name="account_number"></label>
                                             </div>
                                         </div>
-                                
+                                    </div>
+
                                     <div class="col-xs-12 col-md-12 text-right">
                                         <a href="javascript:window.history.back();" class="btn  waves-effect">
                                             <i class="material-icons">arrow_back</i> CANCEL
@@ -332,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-				
+
             </div>
             <!-- #END# Input -->
         </div>
@@ -359,14 +366,14 @@
     <!-- Sweetswal Plugin Js -->
     <script src="plugins/sweetalert/sweetalert.min.js"></script>
 
-     <!-- Moment Plugin Js -->
-     <script src="plugins/momentjs/moment.js"></script>
-    
+    <!-- Moment Plugin Js -->
+    <script src="plugins/momentjs/moment.js"></script>
+
     <script src="plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
     <!-- Validation Plugin Js -->
     <script src="plugins/jquery-validation/jquery.validate.js"></script>
-    
+
     <script src="plugins/jquery-datatable/jquery.dataTables.js"></script>
     <script src="plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
@@ -385,10 +392,10 @@
 
     <!-- Demo Js -->
     <script src="js/demo.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#profile_name").html(profile_name);
-			$("#profile_email").html(profile_email);
+    <script>
+        $(document).ready(function () {
+            $("#profile_name").html(profile_name);
+            $("#profile_email").html(profile_email);
 
             $('.js-basic-example').DataTable({
                 responsive: true,
@@ -400,36 +407,35 @@
             var url = new URL(window.location.href);
             var id = url.searchParams.get("id");
             recepient(id);
-		});
-	</script>
+        });
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
-                app.initialize();
-                $('#sign_in').validate({
-                    highlight: function (input) {
-                        console.log(input);
-                        $(input).parents('.form-line').addClass('error');
-                    },
-                    unhighlight: function (input) {
-                        $(input).parents('.form-line').removeClass('error');
-                    },
-                    errorPlacement: function (error, element) {
-                        $(element).parents('.input-group').append(error);
-                    }
-                });
+            app.initialize();
+            $('#sign_in').validate({
+                highlight: function (input) {
+                    console.log(input);
+                    $(input).parents('.form-line').addClass('error');
+                },
+                unhighlight: function (input) {
+                    $(input).parents('.form-line').removeClass('error');
+                },
+                errorPlacement: function (error, element) {
+                    $(element).parents('.input-group').append(error);
+                }
+            });
         });
 
-        function recepient(id)
-        {
+        function recepient(id) {
             $.ajax({
                 method: "GET",
                 url: "http://167.99.75.238/api/mobile/getRecepientId",
-                data:{id:id},
+                data: { id: id },
                 dataType: "json",
                 success: function (response) {
-                    if(response.status){
+                    if (response.status) {
                         var data = response.data;
-                        if(data){
+                        if (data) {
                             $("#stFormAction").val("EDIT");
                             $("#id").text(data.id);
                             $("#member_id").text(data.member_id);
@@ -451,20 +457,19 @@
             });
         }
 
-        function bank()
-        {
+        function bank() {
             $.ajax({
                 method: "GET",
                 url: "http://167.99.75.238/api/mobile/getBank",
                 dataType: "json",
                 success: function (response) {
-                    if(response.status){
+                    if (response.status) {
                         var data = response.data;
-                        if(data && data.length > 0){
+                        if (data && data.length > 0) {
                             $("#bank_id").empty();
                             for (let i = 0; i < data.length; i++) {
-                                $("#bank_id").append("<option value='"+data[i].id+"'>"+data[i].bank_name+"</option>");
-                                
+                                $("#bank_id").append("<option value='" + data[i].id + "'>" + data[i].bank_name + "</option>");
+
                             }
                         }
                     }
@@ -477,7 +482,7 @@
 
         var app = {
             // Application Constructor
-            initialize: function() {
+            initialize: function () {
                 document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
             },
 
@@ -485,24 +490,24 @@
             //
             // Bind any cordova events here. Common events are:
             // 'pause', 'resume', etc.
-            onDeviceReady: function() {
+            onDeviceReady: function () {
                 document.addEventListener("backbutton", onBackKeyDown, false);
             },
 
             // Update DOM on a Received Event
-            receivedEvent: function(id) {
-            
+            receivedEvent: function (id) {
+
             }
         };
-        
+
         function onBackKeyDown() {
             navigator.app.exitApp();
         }
-        
-	  function logout(){
-			storage.clear();
-			window.location.href ="login.html";
-	  }
+
+        function logout() {
+            storage.clear();
+            window.location.href = "login.html";
+        }
     </script>
     <script src="js/custom.js"></script>
 </body>
